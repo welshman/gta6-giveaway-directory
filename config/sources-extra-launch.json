@@ -1,0 +1,20 @@
+{
+  "providers": {
+    "rss": {
+      "feeds": [
+        { "name": "IGN", "url": "https://feeds.ign.com/ign/all", "review_only": true },
+        { "name": "VGC", "url": "https://www.videogameschronicle.com/feed/", "review_only": true },
+        { "name": "GameSpot", "url": "https://www.gamespot.com/feeds/mashup/", "review_only": true }
+      ]
+    },
+    "watch": {
+      "urls": [
+        "https://gta6bible.com/giveaways/",
+        "https://leonidahub.org/en/gta-vi-giveaway",
+        "https://step.com/gta-vi-sweepstakes-official-rules",
+        { "url": "https://www.sweepsadvantage.com/", "follow_links": true }
+      ]
+    }
+  },
+  "allowed_domains": ["sweepsadvantage.com", "gta6bible.com", "leonidahub.org", "medal.tv", "step.com", "mooyah.com"]
+}
