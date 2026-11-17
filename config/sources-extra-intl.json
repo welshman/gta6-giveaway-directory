@@ -1,0 +1,27 @@
+{
+  "providers": {
+    "watch": {
+      "urls": [
+        "https://www.gtafriends.com/gta6-giveaway",
+        { "url": "https://www.kostenlos.de/gewinnspiele", "follow_links": true },
+        { "url": "https://www.gewinnspiel.de/", "follow_links": true },
+        { "url": "https://www.mmobase.de/gewinnspiele/", "follow_links": true },
+        { "url": "https://www.gewinnspiele-markt.de/", "follow_links": true },
+        { "url": "https://www.gewinn-portal.de/", "follow_links": true },
+        { "url": "https://www.concours.fr/jeux-concours-du-moment/", "follow_links": true },
+        { "url": "https://jeuxconcoursgratuits.fr/concours", "follow_links": true },
+        { "url": "https://www.concoursgratuits.fr/", "follow_links": true },
+        { "url": "https://lepiratedujeu.com/", "follow_links": true },
+        { "url": "https://topconcours.fr/", "follow_links": true },
+        { "url": "https://tiragealert.fr/explore", "follow_links": true },
+        { "url": "https://www.jeu-concours.biz/", "follow_links": true },
+        { "url": "https://www.knshow.com/cat/5/", "follow_links": true },
+        { "url": "https://www.chance.com/present/", "follow_links": true },
+        { "url": "https://kensho-news.com/category/game/", "follow_links": true },
+        { "url": "https://ke-ma.net/", "follow_links": true }
+      ]
+    }
+  },
+  "blocked_domains": ["icu", "mygta6.icu", "gta6keycodes.com", "gta6cyberleek.com"],
+  "allowed_domains": ["gtafriends.com", "edeka.de", "kostenlos.de", "gewinnspiel.de", "mmobase.de", "gewinnspiele-markt.de", "12gewinn.de", "gewinn-portal.de", "einfach-sparsam.de", "concours.fr", "jeuxconcoursgratuits.fr", "concoursgratuits.fr", "lepiratedujeu.com", "topconcours.fr", "tiragealert.fr", "jeu-concours.biz", "knshow.com", "chance.com", "kensho-news.com", "kenshou.club", "ke-ma.net"]
+}

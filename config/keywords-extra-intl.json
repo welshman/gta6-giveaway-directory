@@ -1,0 +1,5 @@
+{
+  "giveaway_terms": ["jeu concours", "jeux concours", "jeu-concours", "tirage au sort", "gagnez", "gagner", "gewinne", "gewinnen", "verlost", "verlosen", "sorteamos", "regalamos", "sorteia", "sorteamos"],
+  "scam_terms_hard": ["human verification", "pass human verification", "complete offers", "complete at least two offers", "codes left today", "redeem codes left", "cyberleek", "gtavi.exe", "gta6.apk"],
+  "scam_terms_soft": ["launcher", "sideload", "unknown sources", "early access", "leaked version", "beta access", "verify you are human", "content locker"]
+}

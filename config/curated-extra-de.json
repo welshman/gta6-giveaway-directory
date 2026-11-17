@@ -1,0 +1,40 @@
+{
+  "giveaways": [
+    {
+      "url": "https://www.edeka.de/gewinnspiele/gta/",
+      "title": "EDEKA – win a PS5, GTA 6 and a JBL headset",
+      "platform": "Website",
+      "creator": "EDEKA",
+      "creator_url": "https://www.edeka.de",
+      "prize": "Main prize: PlayStation 5 Slim (digital), JBL Quantum 100P headset and GTA 6. Plus 4 JBL headsets",
+      "entry_method": ["Answer the quiz question", "Fill in the entry form"],
+      "entry_types": ["form"],
+      "start_date": "2026-11-09T00:00:00Z",
+      "end_date": "2026-11-27T22:59:00Z",
+      "region_text": "Germany. Check the rules for age and residency",
+      "regions": ["de"],
+      "verification": "Verified",
+      "summary": "Run by retailer EDEKA on its own website. Entry period 9 to 27 Nov 2026 (the page also shows 30 Nov as a closing date).",
+      "warnings": ["Two closing dates shown (27 and 30 Nov). We use the earlier one", "A third-party listing says a newsletter sign-up is required"],
+      "trusted_source": true
+    },
+    {
+      "url": "https://www.edeka.de/kampagnen/gewinnspiel-playstation5/",
+      "title": "EDEKA – 20 PlayStation 5 consoles and 20 copies of GTA 6",
+      "platform": "Website",
+      "creator": "EDEKA",
+      "creator_url": "https://www.edeka.de",
+      "prize": "20 PlayStation 5 consoles and 20 GTA 6 games",
+      "entry_method": ["Fill in the entry form"],
+      "entry_types": ["form"],
+      "start_date": "2026-11-09T00:00:00Z",
+      "end_date": "2026-11-22T22:59:00Z",
+      "region_text": "Germany. Residents aged 18 and over",
+      "regions": ["de"],
+      "verification": "Verified",
+      "summary": "Run by retailer EDEKA on its own website. Entry period 9 to 22 Nov 2026.",
+      "warnings": ["Exact closing time not confirmed"],
+      "trusted_source": true
+    }
+  ]
+}
