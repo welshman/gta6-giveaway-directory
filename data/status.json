@@ -1,1 +1,36 @@
-{ "updated_at": null, "providers": {} }
+{
+  "updated_at": "2026-11-17T22:59:09Z",
+  "providers": {
+    "brave": {
+      "last_run": "2026-11-17T22:59:06Z",
+      "ok": false,
+      "results": 0,
+      "skipped": true,
+      "error": "missing secret BRAVE_API_KEY"
+    },
+    "youtube": {
+      "last_run": "2026-11-17T22:59:06Z",
+      "ok": false,
+      "results": 0,
+      "skipped": true,
+      "error": "missing secret YOUTUBE_API_KEY"
+    },
+    "twitch": {
+      "last_run": "2026-11-17T22:59:06Z",
+      "ok": false,
+      "results": 0,
+      "skipped": true,
+      "error": "missing secret TWITCH_CLIENT_ID"
+    },
+    "rss": {
+      "last_run": "2026-11-17T22:59:06Z",
+      "ok": true,
+      "results": 0
+    },
+    "watch": {
+      "last_run": "2026-11-17T22:59:07Z",
+      "ok": true,
+      "results": 0
+    }
+  }
+}
