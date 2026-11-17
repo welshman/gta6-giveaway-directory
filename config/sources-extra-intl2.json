@@ -1,0 +1,31 @@
+{
+  "providers": {
+    "rss": {
+      "feeds": [
+        { "name": "Reddit r/IndianGaming", "url": "https://www.reddit.com/r/IndianGaming/new/.rss" }
+      ]
+    },
+    "watch": {
+      "urls": [
+        "https://wygrywando.pl/promo/gta",
+        "https://lp.morele.net/GTA-VI/",
+        "https://mygta6map.com/pt/sorteio/",
+        "https://leonidaverse.com/pt/gta-6-giveaway",
+        "https://codmunity.gg/ko/giveaways/gta-vi-ultimate-edition-giveaway",
+        { "url": "https://codmunity.gg/pl/giveaways", "follow_links": true },
+        { "url": "https://www.e-konkursy.info/tagi/playstation", "follow_links": true },
+        { "url": "https://www.e-konkursy.info/konkursy/konkursy-social-media", "follow_links": true },
+        { "url": "https://fajnekonkursy.pl/", "follow_links": true },
+        { "url": "https://konkursyblisko.pl/", "follow_links": true },
+        { "url": "https://loteriowo.pl/", "follow_links": true },
+        { "url": "https://www.dimmicosacerchi.it/concorsi-a-premi/gratuiti", "follow_links": true },
+        { "url": "https://www.scontrinofelice.it/concorsi-gratuiti/", "follow_links": true },
+        { "url": "https://www.premieconcorsi.com/", "follow_links": true },
+        { "url": "https://www.pelando.com.br/", "follow_links": true },
+        { "url": "https://giveaway-list.com/", "follow_links": true },
+        { "url": "https://events.kr/", "follow_links": true }
+      ]
+    }
+  },
+  "allowed_domains": ["e-konkursy.info", "fajnekonkursy.pl", "konkursyblisko.pl", "loteriowo.pl", "wygrywando.pl", "codmunity.gg", "dimmicosacerchi.it", "scontrinofelice.it", "premieconcorsi.com", "pelando.com.br", "giveaway-list.com", "events.kr", "mygta6map.com", "leonidaverse.com", "eska.pl"]
+}
