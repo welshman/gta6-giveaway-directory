@@ -2,33 +2,70 @@
   "site": { "base_url": "https://welshman.github.io/gta6-giveaway-directory/", "repo": "welshman/gta6-giveaway-directory" },
   "schedule": { "cron": "7 * * * *", "note": "Edit the cron line in .github/workflows/scan-giveaways.yml too. This copy is for reference." },
   "providers": {
-    "brave":    { "enabled": true,  "api_key_env": "BRAVE_API_KEY", "max_queries_per_run": 12, "count": 20, "freshness": "pm" },
+    "curated":  { "enabled": true, "note": "Hand-picked listings from config/curated.json. Added instantly, no scoring." },
+    "brave":    { "enabled": true,  "api_key_env": "BRAVE_API_KEY", "max_queries_per_run": 8, "count": 20, "freshness": "pm", "note": "Costs about $5 per 1,000 searches. 8 queries x 24 runs x 30 days = 5,760 searches a month. Lower max_queries_per_run to spend less." },
     "serper":   { "enabled": false, "api_key_env": "SERPER_API_KEY", "max_queries_per_run": 10, "note": "Third-party Google results API. Check its terms and cost before enabling." },
     "searxng":  { "enabled": false, "base_url": "https://your-own-searxng.example", "max_queries_per_run": 8, "note": "Only use your own instance, or one that permits automated JSON access." },
     "youtube":  { "enabled": true,  "api_key_env": "YOUTUBE_API_KEY", "max_queries_per_run": 2, "note": "search.list costs 100 quota units per call. Default quota is 10,000 units/day." },
-    "reddit":   { "enabled": false, "client_id_env": "REDDIT_CLIENT_ID", "client_secret_env": "REDDIT_CLIENT_SECRET", "max_queries_per_run": 3, "subreddits": ["giveaways", "GrandTheftAutoVI"] },
+    "reddit":   { "enabled": false, "client_id_env": "REDDIT_CLIENT_ID", "client_secret_env": "REDDIT_CLIENT_SECRET", "max_queries_per_run": 3, "subreddits": ["giveaways", "GrandTheftAutoVI", "GamesGiveaway", "FreeGameFindings", "RandomActsOfGaming"] },
     "twitch":   { "enabled": true,  "client_id_env": "TWITCH_CLIENT_ID", "client_secret_env": "TWITCH_CLIENT_SECRET", "max_queries_per_run": 3 },
+    "bluesky":  { "enabled": false, "handle_env": "BSKY_HANDLE", "password_env": "BSKY_APP_PASSWORD", "max_queries_per_run": 3, "note": "Bluesky post search needs a logged-in session. Create an App Password (never your main password). Experimental." },
     "x":        { "enabled": false, "bearer_env": "X_BEARER_TOKEN", "max_queries_per_run": 1, "note": "Needs a paid X API tier that includes recent search." },
     "rss":      { "enabled": true,  "feeds": [
-        { "name": "Reddit r/giveaways", "url": "https://www.reddit.com/r/giveaways/.rss" },
-        { "name": "Reddit r/GrandTheftAutoVI", "url": "https://www.reddit.com/r/GrandTheftAutoVI/.rss" }
+      { "name": "GamerPower - all giveaways", "url": "https://www.gamerpower.com/rss/giveaways" },
+      { "name": "GamerPower - PlayStation", "url": "https://www.gamerpower.com/rss/playstation" },
+      { "name": "GamerPower - Xbox", "url": "https://www.gamerpower.com/rss/xbox" },
+
+      { "name": "Reddit r/giveaways", "url": "https://www.reddit.com/r/giveaways/new/.rss" },
+      { "name": "Reddit r/GrandTheftAutoVI", "url": "https://www.reddit.com/r/GrandTheftAutoVI/new/.rss" },
+      { "name": "Reddit r/GamesGiveaway", "url": "https://www.reddit.com/r/GamesGiveaway/new/.rss" },
+      { "name": "Reddit r/FreeGameFindings", "url": "https://www.reddit.com/r/FreeGameFindings/new/.rss" },
+      { "name": "Reddit r/GiftofGames", "url": "https://www.reddit.com/r/GiftofGames/new/.rss" },
+      { "name": "Reddit r/giveawaysforgaming", "url": "https://www.reddit.com/r/giveawaysforgaming/new/.rss" },
+      { "name": "Reddit r/FreeGameGiveaway", "url": "https://www.reddit.com/r/FreeGameGiveaway/new/.rss" },
+      { "name": "Reddit r/steam_giveaway", "url": "https://www.reddit.com/r/steam_giveaway/new/.rss" },
+      { "name": "Reddit r/RandomActsOfGaming", "url": "https://www.reddit.com/r/RandomActsOfGaming/new/.rss" },
+      { "name": "Reddit search: GTA 6 giveaway", "url": "https://www.reddit.com/search.rss?q=GTA+6+giveaway&sort=new&t=week" },
+      { "name": "Reddit search: GTA VI giveaway", "url": "https://www.reddit.com/search.rss?q=GTA+VI+giveaway&sort=new&t=week" },
+      { "name": "Reddit search: GTA 6 code", "url": "https://www.reddit.com/search.rss?q=GTA+6+free+code&sort=new&t=week" },
+
+      { "name": "Mastodon #gta6", "url": "https://mastodon.social/tags/gta6.rss" },
+      { "name": "Mastodon #gtavi", "url": "https://mastodon.social/tags/gtavi.rss" },
+      { "name": "Mastodon #gta6giveaway", "url": "https://mastodon.social/tags/gta6giveaway.rss" },
+      { "name": "Mastodon #giveaway", "url": "https://mastodon.social/tags/giveaway.rss" },
+      { "name": "Mastodon #giveaways", "url": "https://mastodon.social/tags/giveaways.rss" },
+
+      { "name": "Gamer Guides - GTA VI hub", "url": "https://www.gamerguides.com/grand-theft-auto-vi/feed", "review_only": true },
+      { "name": "PC Gamer", "url": "https://www.pcgamer.com/rss/", "review_only": true },
+      { "name": "Kotaku", "url": "https://kotaku.com/rss", "review_only": true },
+      { "name": "Polygon", "url": "https://www.polygon.com/rss/index.xml", "review_only": true },
+      { "name": "Rock Paper Shotgun", "url": "https://www.rockpapershotgun.com/feed/", "review_only": true },
+      { "name": "Eurogamer", "url": "https://www.eurogamer.net/feed", "review_only": true },
+      { "name": "GamesRadar", "url": "https://www.gamesradar.com/feeds.xml", "review_only": true },
+      { "name": "PlayStation Blog", "url": "https://feeds.feedburner.com/PSBlog", "review_only": true },
+      { "name": "Xbox Wire", "url": "https://news.xbox.com/en-us/feed/", "review_only": true },
+      { "name": "Ars Technica Gaming", "url": "https://feeds.arstechnica.com/arstechnica/gaming/", "review_only": true }
     ] },
-    "watch":    { "enabled": true,  "urls": [], "note": "Add creator pages / Linktree / Carrd / giveaway landing pages here." }
+    "watch":    { "enabled": true,  "urls": [
+      "https://www.gtaboom.com/gta6-giveaway",
+      "https://www.thegiveaway.com/",
+      "https://www.gamerpower.com/"
+    ], "note": "Pages are read politely (robots.txt respected). Add creator pages, Linktree, Carrd, giveaway landing pages here." }
   },
   "platform_map": {
     "twitch.tv": "Twitch", "kick.com": "Kick", "x.com": "X", "twitter.com": "X", "youtube.com": "YouTube", "youtu.be": "YouTube",
     "discord.com": "Discord", "discord.gg": "Discord", "reddit.com": "Reddit", "instagram.com": "Instagram", "tiktok.com": "TikTok",
-    "facebook.com": "Facebook", "fb.com": "Facebook"
+    "facebook.com": "Facebook", "fb.com": "Facebook", "bsky.app": "Bluesky", "mastodon.social": "Mastodon", "threads.net": "Threads", "t.me": "Telegram"
   },
-  "no_fetch_domains": ["x.com", "twitter.com", "instagram.com", "tiktok.com", "facebook.com", "fb.com", "discord.com", "discord.gg", "twitch.tv", "kick.com", "youtube.com", "youtu.be", "reddit.com"],
-  "allowed_domains": ["gleam.io", "rafflecopter.com", "woobox.com", "kingsumo.com", "vast.gg", "giveawaylisting.com", "linktr.ee", "beacons.ai", "carrd.co"],
+  "no_fetch_domains": ["x.com", "twitter.com", "instagram.com", "tiktok.com", "facebook.com", "fb.com", "discord.com", "discord.gg", "twitch.tv", "kick.com", "youtube.com", "youtu.be", "reddit.com", "bsky.app", "mastodon.social", "threads.net", "t.me"],
+  "allowed_domains": ["gleam.io", "rafflecopter.com", "woobox.com", "kingsumo.com", "vast.gg", "giveawaylisting.com", "linktr.ee", "beacons.ai", "carrd.co", "sweepwidget.com", "viralsweep.com", "gamerpower.com", "thegiveaway.com", "gtaboom.com"],
   "trusted_domains": [],
   "blocked_domains": ["bit.ly", "tinyurl.com", "cutt.ly", "shorturl.at", "is.gd", "adf.ly", "linkvertise.com"],
-  "rate_limits": { "delay_seconds": 1.0, "page_fetch_budget_per_run": 80, "recheck_budget_per_run": 80, "max_candidates_per_run": 300 },
+  "rate_limits": { "delay_seconds": 1.0, "page_fetch_budget_per_run": 80, "recheck_budget_per_run": 80, "max_candidates_per_run": 400 },
   "expiry": {
     "grace_hours": 24,
     "archive_delete_after_days": 14,
-    "unseen_hours": { "default": 72, "twitch": 4, "kick": 4, "x": 72, "youtube": 168 },
+    "unseen_hours": { "default": 72, "twitch": 4, "kick": 4, "x": 72, "youtube": 168, "bluesky": 72, "mastodon": 72 },
     "max_fetch_failures": 6,
     "max_age_days_without_end_date": 14
   },

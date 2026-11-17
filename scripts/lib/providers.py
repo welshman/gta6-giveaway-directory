@@ -2,7 +2,7 @@
 To add a provider: write a function, decorate with @provider("name"), add a block to config/sources.json."""
 import os
 from defusedxml import ElementTree as ET
-from .util import now, iso, strip_html, MissingSecret, ProviderError
+from .util import now, iso, load, strip_html, MissingSecret, ProviderError
 from datetime import timedelta
 
 PROVIDERS = {}
@@ -37,6 +37,18 @@ def cand(url, title, snippet, source, query=None, **extra):
          "creator": "", "creator_url": "", "platform": None, "thumbnail": None, "end_date": None}
     c.update(extra)
     return c
+
+
+@provider("curated")
+def curated(p, qs, http, src):
+    """Hand-picked listings from config/curated.json (published without scoring)."""
+    out = []
+    for it in load("config/curated.json", {"giveaways": []})["giveaways"]:
+        c = cand(it["url"], it["title"], it.get("summary", ""), "curated")
+        c.update(it)
+        c["curated"] = True
+        out.append(c)
+    return out
 
 
 @provider("brave")
@@ -131,6 +143,25 @@ def twitch(p, qs, http, src):
     return out
 
 
+@provider("bluesky")
+def bluesky(p, qs, http, src):
+    """Experimental. Post search needs a logged-in session (use an App Password, never your main password)."""
+    handle, pw, out = secret(p, "handle_env"), secret(p, "password_env"), []
+    s = http.post("https://bsky.social/xrpc/com.atproto.server.createSession", json={"identifier": handle, "password": pw})
+    if s.status_code != 200:
+        raise ProviderError(f"login HTTP {s.status_code}")
+    hdr = {"Authorization": "Bearer " + s.json()["accessJwt"], "atproto-proxy": "did:web:api.bsky.app#bsky_appview"}
+    for q in pick(qs["api_queries"], p.get("max_queries_per_run", 3)):
+        r = http.get("https://bsky.social/xrpc/app.bsky.feed.searchPosts", headers=hdr, params={"q": q, "sort": "latest", "limit": 25})
+        if r.status_code != 200:
+            raise ProviderError(f"HTTP {r.status_code}")
+        for post in r.json().get("posts", []):
+            h, text = post["author"]["handle"], post.get("record", {}).get("text", "")
+            out.append(cand(f"https://bsky.app/profile/{h}/post/{post['uri'].rsplit('/', 1)[-1]}", text[:100], text, "bluesky", q,
+                            creator="@" + h, creator_url=f"https://bsky.app/profile/{h}", platform="Bluesky"))
+    return out
+
+
 @provider("x")
 def x_api(p, qs, http, src):
     tok, out = secret(p, "bearer_env"), []
@@ -153,6 +184,7 @@ def _local(tag):
 
 @provider("rss")
 def rss(p, qs, http, src):
+    """RSS/Atom feeds. A feed with "review_only": true (news sites) sends every match to the review queue."""
     out = []
     for feed in p.get("feeds", []):
         try:
@@ -171,7 +203,7 @@ def rss(p, qs, http, src):
                 continue
             body = "".join((f[k].text or "") for k in ("description", "summary", "content") if k in f)
             title = f["title"].text if "title" in f and f["title"].text else ""
-            out.append(cand(link.strip(), title, body, "rss:" + feed.get("name", feed["url"])))
+            out.append(cand(link.strip(), title, body, "rss:" + feed.get("name", feed["url"]), force_review=bool(feed.get("review_only"))))
     return out
 
 

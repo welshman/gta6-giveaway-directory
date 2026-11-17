@@ -103,6 +103,26 @@ class Scanner:
         return out
 
     # ---------- processing ----------
+    def add_curated(self, c):
+        """Hand-picked listing from config/curated.json: published as-is."""
+        end, start = parse_iso(c.get("end_date")), parse_iso(c.get("start_date"))
+        if (end and end < now()) or (start and start > now()):
+            return
+        t, plat = iso(now()), self.platform_of(c["url"], c.get("platform"))
+        l = {
+            "id": listing_id(c["url"]), "title": c["title"], "platform": plat, "url": c["url"], "creator": c.get("creator", ""), "creator_url": c.get("creator_url", ""),
+            "prize": c.get("prize", ""), "entry_method": c.get("entry_method", []), "entry_types": c.get("entry_types", []),
+            "start_date": c.get("start_date"), "end_date": c.get("end_date"), "region_text": c.get("region_text", ""), "regions": c.get("regions", []),
+            "verification": c.get("verification", "Verified"), "confidence": 95, "source": "curated", "search_query": None,
+            "date_first_found": t, "date_last_checked": t, "date_last_seen": t, "date_expired": None,
+            "summary": c.get("summary", ""), "thumbnail": None, "tags": ["GTA 6", "Giveaway", plat] + c.get("tags", []), "status": "Active",
+            "warnings": c.get("warnings", []), "trusted_source": c.get("trusted_source", False), "moderation_notes": "Curated entry from config/curated.json",
+            "report_count": 0, "duplicate_hash": dup_hash(c["title"], c.get("creator", "")), "fetch_failures": 0, "curated": True,
+        }
+        self.gv.append(l); self.new.append(l); self.stats["published"] += 1
+        self.index[normalize_url(c["url"])] = l
+        self.event("published", c["url"], c["title"], "curated", 95)
+
     def process(self, c):
         url = c["url"]
         if not url.startswith(("http://", "https://")):
@@ -116,6 +136,8 @@ class Scanner:
             self.index[key]["date_last_seen"] = iso(now())
             self.stats["duplicates"] += 1
             return
+        if c.get("curated"):
+            return self.add_curated(c)
         title, body, flags, info, thumb = c["title"], c.get("snippet", ""), [], None, c.get("thumbnail")
         if fetchable(url, self.src) and self.fetch_budget > 0 and not self.args.offline:
             self.fetch_budget -= 1
@@ -131,8 +153,6 @@ class Scanner:
                 title = title or info["title"]
                 body += "\n" + info["description"] + "\n" + info["text"]
                 thumb = thumb or info["image"] or None
-        elif not fetchable(url, self.src) is False:
-            pass
         creator = c.get("creator", "")
         ev = self.an.evaluate(title, body, url, creator, parse_iso(c.get("end_date")) if c.get("end_date") else None)
         if ev["reject"]:
@@ -184,7 +204,7 @@ class Scanner:
             return self.expire(l, "end date passed")
         if l.get("sample") or self.args.offline:
             return
-        if fetchable(l["url"], self.src) and self.check_budget > 0:
+        if fetchable(l["url"], self.src) and not l.get("curated") and self.check_budget > 0:
             self.check_budget -= 1
             pg = fetch_page(self.http, l["url"])
             st = pg["status"]
@@ -215,7 +235,7 @@ class Scanner:
         seen = parse_iso(l.get("date_last_seen")) or parse_iso(l["date_first_found"])
         if t - seen > timedelta(hours=hrs):
             return self.expire(l, f"not seen in search for {hrs}h")
-        if not end and t - parse_iso(l["date_first_found"]) > timedelta(days=self.ex["max_age_days_without_end_date"]):
+        if not end and not l.get("curated") and t - parse_iso(l["date_first_found"]) > timedelta(days=self.ex["max_age_days_without_end_date"]):
             self.expire(l, "no end date and listing is old")
 
     def housekeeping(self):
@@ -255,6 +275,7 @@ class Scanner:
         if not self.args.offline:
             cands = self.run_providers() + self.submissions()
             self.stats["found"] = len(cands)
+            cands.sort(key=lambda c: not c.get("curated"))      # curated entries first so they are never cut by the cap
             for c in cands[: self.src["rate_limits"]["max_candidates_per_run"]]:
                 self.process(c)
             self.apply_reports()

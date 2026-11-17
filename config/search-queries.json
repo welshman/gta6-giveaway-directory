@@ -1,5 +1,5 @@
 {
-  "api_queries": ["GTA 6 giveaway", "GTA VI giveaway", "Grand Theft Auto 6 giveaway", "GTA 6 code giveaway", "GTA 6 giveaway enter"],
+  "api_queries": ["GTA 6 giveaway", "GTA VI giveaway", "Grand Theft Auto 6 giveaway", "GTA 6 code giveaway", "GTA 6 giveaway enter", "GTA 6 free copy", "GTA VI free code"],
   "web_queries": [
     "GTA 6 giveaway", "GTA VI giveaway", "Grand Theft Auto 6 giveaway", "GTA 6 giveaway Twitch", "GTA 6 giveaway Kick",
     "GTA 6 giveaway X", "GTA 6 giveaway Twitter", "GTA 6 giveaway Discord", "GTA 6 giveaway YouTube", "GTA 6 giveaway Reddit",
@@ -10,6 +10,24 @@
     "GTA 6 giveaway site:reddit.com/r/giveaways", "GTA 6 giveaway site:reddit.com/r/GrandTheftAutoVI", "GTA 6 giveaway site:instagram.com",
     "GTA 6 giveaway site:tiktok.com", "GTA 6 giveaway site:facebook.com", "GTA 6 giveaway site:gleam.io", "GTA 6 giveaway site:rafflecopter.com",
     "GTA 6 giveaway site:woobox.com", "GTA 6 giveaway site:kingsumo.com", "GTA 6 giveaway site:vast.gg", "GTA 6 giveaway site:giveawaylisting.com",
-    "GTA 6 sweepstakes", "GTA VI prize draw", "win GTA 6 free copy"
+    "GTA 6 sweepstakes", "GTA VI prize draw", "win GTA 6 free copy",
+
+    "GTA 6 giveaway site:sweepwidget.com", "GTA 6 giveaway site:viralsweep.com", "GTA 6 giveaway site:bsky.app", "GTA 6 giveaway site:threads.net",
+    "GTA 6 giveaway site:t.me", "GTA 6 giveaway site:mastodon.social", "GTA 6 giveaway site:gamerpower.com", "GTA 6 giveaway site:thegiveaway.com",
+    "GTA 6 giveaway site:steamcommunity.com", "GTA 6 giveaway site:medium.com", "GTA 6 giveaway site:substack.com", "GTA 6 giveaway site:forum",
+    "GTA 6 giveaway site:resetera.com", "GTA 6 giveaway site:gtaforums.com", "GTA 6 giveaway site:gamefaqs.gamespot.com",
+
+    "GTA 6 Ultimate Edition giveaway", "GTA 6 PS5 giveaway", "GTA 6 Xbox giveaway", "GTA 6 PS5 code giveaway", "GTA 6 Xbox Series X giveaway",
+    "GTA 6 launch day giveaway", "GTA 6 release giveaway", "GTA 6 giveaway winner announced soon", "GTA 6 giveaway repost follow", "GTA 6 giveaway retweet",
+    "GTA 6 giveaway comment to win", "GTA 6 giveaway link in bio", "GTA 6 giveaway free entry", "GTA 6 giveaway no purchase necessary",
+    "GTA 6 giveaway worldwide", "GTA 6 giveaway USA", "GTA 6 giveaway Canada", "GTA 6 giveaway Australia", "GTA 6 giveaway Europe",
+    "GTA 6 giveaway India", "GTA 6 giveaway Brazil", "GTA 6 giveaway Mexico", "GTA 6 giveaway Philippines", "GTA 6 giveaway South Africa",
+    "GTA 6 giveaway Nigeria", "GTA 6 giveaway Japan", "GTA 6 giveaway Middle East",
+
+    "Kick Sunset Reward Case GTA VI", "Twitch GTA 6 giveaway drops", "TwitchCon GTA 6 giveaway", "streamer GTA 6 giveaway", "GTA 6 code drop stream",
+    "GTA 6 raffle", "GTA 6 competition win", "GTA 6 contest", "GTA 6 free key", "GTA 6 gift card giveaway", "GTA 6 PS Plus giveaway", "GTA 6 bundle giveaway PS5 console",
+
+    "sorteo GTA 6", "sorteo GTA VI", "sorteio GTA 6", "Gewinnspiel GTA 6", "Verlosung GTA 6", "concours GTA 6", "concorso GTA 6",
+    "konkurs GTA 6", "çekiliş GTA 6", "winactie GTA 6", "розыгрыш GTA 6", "GTA6 プレゼント企画", "GTA 6 当選 懸賞", "GTA 6 경품 이벤트", "مسابقة GTA 6", "GTA 6 लकी ड्रॉ giveaway"
   ]
 }

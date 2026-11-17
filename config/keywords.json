@@ -1,9 +1,9 @@
 {
   "gta6_terms": ["gta 6", "gta6", "gta-6"],
   "gta_vi_terms": ["gta vi", "gtavi", "gta-vi"],
-  "grand_theft_auto_terms": ["grand theft auto 6", "grand theft auto vi", "grand theft auto-6"],
-  "giveaway_terms": ["giveaway", "give away", "giving away", "free copy", "free game", "win a copy", "code drop", "key drop", "free key", "raffle"],
-  "contest_terms": ["contest", "competition"],
+  "grand_theft_auto_terms": ["grand theft auto 6", "grand theft auto vi", "grand theft auto-6", "grand theft auto: vi"],
+  "giveaway_terms": ["giveaway", "giveaways", "give away", "giving away", "gives away", "free copy", "free copies", "free game", "free code", "free codes", "win a copy", "code drop", "code drops", "key drop", "free key", "raffle", "raffles", "gleam", "sorteo", "sorteio", "gewinnspiel", "verlosung", "concours", "concorso", "konkurs", "çekiliş", "cekilis", "winactie", "розыгрыш", "プレゼント企画", "懸賞", "当選", "경품", "مسابقة"],
+  "contest_terms": ["contest", "contests", "competition"],
   "sweepstake_terms": ["sweepstake", "sweepstakes", "prize draw"],
   "scam_terms_hard": ["enter your password", "send me your password", "your password", "card number", "credit card", "cvv", "pay to enter", "entry fee", "send crypto", "send bitcoin", "seed phrase", "wallet connect", "login to claim", "log in to claim", "verify your account to claim", "gift card code required"],
   "scam_terms_soft": ["download", "install the app", "apk", "complete a survey", "survey", "subscribe to unlock", "limited slots", "100% free", "claim now", "no verification", "dm me", "telegram", "whatsapp", "crypto", "shipping fee", "pay shipping"],
