@@ -9,7 +9,7 @@
 <meta property="og:description" content="Find active GTA 6 giveaways, checked every hour.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://welshman.github.io/gta6-giveaway-directory/">
-<meta name="theme-color" content="#0d0618">
+<meta name="theme-color" content="#0b0414">
 <link rel="icon" href="icon.svg" type="image/svg+xml">
 <link rel="manifest" href="manifest.webmanifest">
 <link rel="alternate" type="application/rss+xml" title="New GTA 6 giveaways" href="feed.xml">
@@ -19,11 +19,11 @@
 <a class="skip" href="#list">Skip to giveaways</a>
 <header class="top">
   <div class="wrap bar">
-    <a class="logo" href="./"><span>GTA 6</span> Giveaway Directory</a>
+    <a class="logo" href="./"><span>GTA 6</span> Giveaways</a>
     <nav aria-label="Main">
       <button class="tab is-on" data-view="active" type="button">Active</button>
-      <button class="tab" data-view="ended" type="button">Recently ended</button>
-      <button class="tab" data-view="status" type="button">Source status</button>
+      <button class="tab" data-view="ended" type="button">Ended</button>
+      <button class="tab" data-view="status" type="button">Status</button>
     </nav>
     <button id="theme" class="icon-btn" type="button" aria-label="Switch light or dark mode">◐</button>
   </div>
@@ -32,43 +32,48 @@
 <main>
 <section class="hero">
   <div class="wrap">
-    <p class="eyebrow">Independent · Checked hourly</p>
+    <p class="eyebrow">Independent · Checked every hour</p>
     <h1>Find Active <span class="grad">GTA 6</span> Giveaways</h1>
-    <p class="lead">We search the web for GTA 6 giveaways, filter out the obvious scams, and link you straight to the original post so you can enter. We don't run any giveaways ourselves.</p>
-    <p class="meta"><strong id="count">–</strong> active giveaways · Last updated: <time id="updated">loading…</time></p>
+    <p class="lead">Every live GTA 6 giveaway we can find, in one place. Pick one, click Enter, and you go straight to the original post.</p>
+    <p class="meta"><strong id="count">–</strong> active giveaways · Updated <time id="updated">loading…</time></p>
   </div>
 </section>
 
 <div class="wrap">
-  <p class="disclaimer" role="note"><strong>Stay safe:</strong> This is an independent directory. Always check the official giveaway rules and never share sensitive account information. Real giveaways never need your password, card details or a payment.</p>
+  <p class="disclaimer" role="note"><strong>Stay safe:</strong> This is an independent directory. Always check the official giveaway rules and never share sensitive account information. We don't run these giveaways.</p>
 
   <section id="controls" aria-label="Search and filters">
     <label class="sr" for="q">Search giveaways</label>
-    <input id="q" type="search" placeholder="Search title, creator, platform, prize…" autocomplete="off">
+    <input id="q" type="search" placeholder="Search by title, creator, platform or prize…" autocomplete="off">
     <div class="row">
-      <label>Platform <select id="f-platform"><option value="all">All</option></select></label>
-      <label>Trust <select id="f-ver"><option value="all">All</option><option>Verified</option><option>Likely</option><option>Unverified</option></select></label>
+      <label>Platform <select id="f-platform"><option value="all">All platforms</option></select></label>
       <label>Region <select id="f-region"><option value="all">All regions</option></select></label>
-      <label>How to enter <select id="f-entry"><option value="all">Any</option><option value="follow">Follow</option><option value="comment">Comment</option><option value="repost">Repost</option><option value="subscribe">Subscribe</option><option value="join-discord">Join Discord</option><option value="form">Form / Gleam</option><option value="watch-stream">Watch stream</option></select></label>
-      <label>Sort <select id="sort"><option value="ending">Ending soonest</option><option value="newest">Newest</option><option value="verified">Recently checked</option><option value="az">A–Z</option></select></label>
+      <label>Sort by <select id="sort"><option value="ending">Ending soonest</option><option value="newest">Newest</option><option value="verified">Recently checked</option><option value="az">A–Z</option></select></label>
     </div>
-    <div class="chips" role="group" aria-label="Quick filters">
-      <button class="chip" data-quick="soon" type="button" aria-pressed="false">⏰ Ending today</button>
-      <button class="chip" data-quick="new" type="button" aria-pressed="false">✨ New today</button>
-      <button class="chip" data-quick="nopurchase" type="button" aria-pressed="false">No purchase necessary</button>
-      <button class="chip" data-quick="verified" type="button" aria-pressed="false">Verified creators only</button>
-      <button class="chip" data-quick="official" type="button" aria-pressed="false">Official-looking source</button>
-      <button class="chip" id="favonly" type="button" aria-pressed="false">★ Saved</button>
-      <button class="chip" id="notify" type="button" aria-pressed="false">🔔 Alerts</button>
-    </div>
+    <details class="more-filters">
+      <summary>More filters</summary>
+      <div class="row">
+        <label>Trust level <select id="f-ver"><option value="all">All</option><option>Verified</option><option>Likely</option><option>Unverified</option></select></label>
+        <label>How to enter <select id="f-entry"><option value="all">Any</option><option value="follow">Follow</option><option value="comment">Comment</option><option value="repost">Repost</option><option value="subscribe">Subscribe</option><option value="join-discord">Join Discord</option><option value="form">Form / Gleam</option><option value="watch-stream">Watch stream</option></select></label>
+      </div>
+      <div class="chips" role="group" aria-label="Quick filters">
+        <button class="chip" data-quick="soon" type="button" aria-pressed="false">Ending today</button>
+        <button class="chip" data-quick="new" type="button" aria-pressed="false">New today</button>
+        <button class="chip" data-quick="nopurchase" type="button" aria-pressed="false">No purchase necessary</button>
+        <button class="chip" data-quick="verified" type="button" aria-pressed="false">Verified only</button>
+        <button class="chip" data-quick="official" type="button" aria-pressed="false">Official-looking source</button>
+        <button class="chip" id="favonly" type="button" aria-pressed="false">★ Saved</button>
+        <button class="chip" id="notify" type="button" aria-pressed="false">🔔 Alerts</button>
+      </div>
+    </details>
   </section>
 
   <section id="list" aria-live="polite" tabindex="-1">
+    <p id="shown"></p>
     <p id="loading" class="state">Loading giveaways…</p>
     <div id="error" class="state err" hidden>Couldn't load the giveaway data. Please refresh, or try again in a few minutes.</div>
     <div id="empty" class="state" hidden></div>
     <div id="cards" class="grid"></div>
-    <div class="center"><button id="more" class="btn ghost" type="button" hidden>Load more</button></div>
   </section>
 
   <section id="status" hidden aria-label="Source status"><h2>Source status</h2><div id="status-body"></div></section>
@@ -76,10 +81,10 @@
   <section class="legend" aria-labelledby="legend-h">
     <h2 id="legend-h">What the labels mean</h2>
     <ul>
-      <li><span class="badge v-verified">✔ Verified</span> A moderator or trusted creator confirmed it.</li>
-      <li><span class="badge v-likely">◐ Likely</span> Looks genuine to our automatic checks. Not confirmed by a person.</li>
-      <li><span class="badge v-unverified">? Unverified</span> Added, but we couldn't check much. Take extra care.</li>
-      <li><span class="badge v-expired">✖ Expired</span> Ended or removed. You can no longer enter.</li>
+      <li><span class="badge v-verified">✔ Verified</span> A person or trusted creator confirmed it.</li>
+      <li><span class="badge v-likely">◐ Likely</span> Passed our automatic checks. Not confirmed by a person.</li>
+      <li><span class="badge v-unverified">? Unverified</span> We couldn't check much. Take extra care.</li>
+      <li><span class="badge v-expired">✖ Expired</span> Ended or removed. You can't enter any more.</li>
     </ul>
   </section>
 </div>
@@ -87,7 +92,7 @@
 
 <footer>
   <div class="wrap">
-    <p>Not affiliated with Rockstar Games, Take-Two, Twitch, Kick, X or any platform. We don't host or run giveaways, and we never ask for personal details. <a href="feed.xml">RSS feed</a> · No analytics, no trackers.</p>
+    <p>Not affiliated with Rockstar Games, Take-Two, Twitch, Kick, X or any platform. We never ask for personal details. <a href="feed.xml">RSS feed</a> · No analytics, no trackers.</p>
   </div>
 </footer>
 <noscript><p class="wrap">This directory needs JavaScript to show giveaways.</p></noscript>

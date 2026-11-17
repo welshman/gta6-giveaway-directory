@@ -1,7 +1,6 @@
 (() => {
 "use strict";
 const REPO = "welshman/gta6-giveaway-directory";
-const PAGE = 12;
 const ICONS = {Twitch:"🟣",Kick:"🟢",X:"✖️",YouTube:"▶️",Discord:"💬",Reddit:"🟠",Instagram:"📸",TikTok:"🎵",Facebook:"📘",Website:"🌐"};
 
 // Region keys must match config/keywords.json > region_terms. [key, label, parent regions]
@@ -36,7 +35,7 @@ const el = (tag, props = {}, ...kids) => {
   kids.flat().forEach((c) => c != null && n.append(c));
   return n;
 };
-const S = { active: [], ended: [], status: null, view: "active", shown: PAGE, quick: new Set(), favOnly: false,
+const S = { active: [], ended: [], status: null, view: "active", quick: new Set(), favOnly: false,
   favs: new Set(JSON.parse(localStorage.getItem("favs") || "[]")) };
 
 const safeUrl = (u) => { try { const x = new URL(u); return /^https?:$/.test(x.protocol) ? x.href : "#"; } catch { return "#"; } };
@@ -44,7 +43,7 @@ const lower = (s) => String(s || "").toLowerCase();
 const HOUR = 36e5;
 
 function timeLeft(iso) {
-  if (!iso) return "End date not stated";
+  if (!iso) return "Not stated";
   const ms = new Date(iso) - Date.now();
   if (ms <= 0) return "Ended";
   const d = Math.floor(ms / 864e5), h = Math.floor(ms % 864e5 / HOUR), m = Math.floor(ms % HOUR / 6e4);
@@ -60,30 +59,31 @@ function regionMatches(g, rf) {
   return (PARENTS[rf] || []).some((p) => set.has(p));
 }
 
+function fact(label, value, cls, wide) {
+  return value ? el("div", { class: wide ? "wide" : "" }, el("dt", { text: label }), el("dd", { class: cls || "", text: value })) : null;
+}
+
 function card(g, ended) {
   const link = safeUrl(g.url);
-  const row = (k, v) => v ? [el("dt", { text: k }), el("dd", { text: v })] : [];
-  const reports = [["Report this giveaway", "other"], ["This looks like a scam", "scam"], ["This has ended", "ended"], ["Broken link", "broken"]];
+  const reports = [["This looks like a scam", "scam"], ["This has ended", "ended"], ["Broken link", "broken"], ["Report this giveaway", "other"]];
   return el("article", { class: "card" + (ended ? " ended" : ""), "data-id": g.id },
     el("div", { class: "top-line" },
       el("span", { class: "plat" }, el("span", { "aria-hidden": "true", text: (ICONS[g.platform] || "🌐") + " " }), g.platform),
       el("span", { class: "badge v-" + lower(g.verification), text: verLabel(g.verification) })),
-    el("h3", { text: g.title }),
-    el("dl", {},
-      row("By", g.creator), row("Prize", g.prize), row("Enter", (g.entry_method || []).join(", ")),
-      row("Region", regionText(g)),
-      [el("dt", { text: "Ends" }), el("dd", { class: "ends", "data-end": g.end_date || "", text: ended ? "Ended – can't enter" : timeLeft(g.end_date) })]),
-    g.summary ? el("p", { text: g.summary }) : null,
+    el("div", {}, el("h3", { text: g.title }), g.creator ? el("p", { class: "by", text: "by " + g.creator }) : null),
+    el("dl", { class: "facts" },
+      fact("Ends", ended ? "Ended" : timeLeft(g.end_date), "ends"),
+      fact("Region", regionText(g) || "Not stated"),
+      fact("Prize", g.prize || "See giveaway", "", true),
+      fact("How to enter", (g.entry_method || []).join(", ") || "See giveaway", "", true)),
     ...(g.warnings || []).map((w) => el("p", { class: "warn", text: "⚠ " + w })),
-    el("div", { class: "tags" }, (g.tags || []).slice(0, 6).map((t) => el("span", { text: t }))),
-    el("div", { class: "actions" },
-      el("a", { class: "btn", href: link, target: "_blank", rel: "noopener noreferrer", "aria-disabled": ended ? "true" : null,
-        "aria-label": `${ended ? "Ended" : "Enter giveaway"}: ${g.title}`, text: ended ? "Ended" : "Enter Giveaway" }),
-      el("button", { class: "btn ghost small", type: "button", onclick: (e) => copy(link, e.target), text: "Copy link" }),
-      el("button", { class: "btn ghost small", type: "button", "aria-pressed": S.favs.has(g.id), "aria-label": "Save giveaway",
-        onclick: (e) => fav(g.id, e.target), text: S.favs.has(g.id) ? "★ Saved" : "☆ Save" })),
-    el("details", { class: "report" }, el("summary", { text: "Report a problem" }),
-      reports.map(([label, t]) => el("a", { href: issueUrl(t, g), target: "_blank", rel: "noopener noreferrer", text: label }))));
+    el("a", { class: "btn", href: link, target: "_blank", rel: "noopener noreferrer", "aria-disabled": ended ? "true" : null,
+      "aria-label": `${ended ? "Ended" : "Enter giveaway"}: ${g.title}`, text: ended ? "Ended – can't enter" : "Enter Giveaway →" }),
+    el("div", { class: "mini" },
+      el("button", { type: "button", onclick: (e) => copy(link, e.target), text: "Copy link" }),
+      el("button", { type: "button", "aria-pressed": S.favs.has(g.id), onclick: (e) => fav(g.id, e.target), text: S.favs.has(g.id) ? "★ Saved" : "☆ Save" }),
+      el("details", { class: "report" }, el("summary", { text: "Report" }),
+        el("div", { class: "menu" }, reports.map(([label, t]) => el("a", { href: issueUrl(t, g), target: "_blank", rel: "noopener noreferrer", text: label }))))));
 }
 
 async function copy(text, btn) {
@@ -131,24 +131,25 @@ function sorted(list) {
 
 function render() {
   const cards = $("#cards"); cards.replaceChildren();
-  const isEnded = S.view === "ended";
-  $("#status").hidden = S.view !== "status";
-  $("#controls").hidden = S.view === "status";
-  $("#cards").hidden = $("#more").hidden = S.view === "status";
-  if (S.view === "status") { $("#empty").hidden = true; return renderStatus(); }
-  const all = sorted(filtered(isEnded ? S.ended : S.active));
+  const isEnded = S.view === "ended", isStatus = S.view === "status";
+  $("#status").hidden = !isStatus;
+  $("#controls").hidden = isStatus;
+  cards.hidden = $("#shown").hidden = isStatus;
+  if (isStatus) { $("#empty").hidden = true; return renderStatus(); }
+  const all = sorted(filtered(isEnded ? S.ended : S.active));   // every match is shown at once, no paging
   $("#empty").hidden = all.length > 0;
+  $("#shown").textContent = all.length ? `Showing ${all.length} ${isEnded ? "recently ended" : "active"} giveaway${all.length === 1 ? "" : "s"}` : "";
   if (!all.length) $("#empty").textContent = isEnded ? "Nothing has ended recently."
     : S.active.length ? "No giveaways match your filters. Try clearing a filter." : "No active giveaways right now. Check back soon, since we scan every hour.";
-  all.slice(0, S.shown).forEach((g) => cards.append(card(g, isEnded)));
-  $("#more").hidden = all.length <= S.shown;
-  $("#more").textContent = `Load more (${all.length - S.shown} left)`;
+  const frag = document.createDocumentFragment();
+  all.forEach((g) => frag.append(card(g, isEnded)));
+  cards.append(frag);
 }
 
 function renderStatus() {
   const b = $("#status-body"); b.replaceChildren();
   const st = S.status;
-  if (!st || !Object.keys(st.providers || {}).length) return b.append(el("p", { text: "No scans recorded yet." }));
+  if (!st || !Object.keys(st.providers || {}).length) return b.append(el("p", { class: "state", text: "No scans recorded yet." }));
   const rows = Object.entries(st.providers).map(([n, p]) => el("tr", {},
     el("td", { text: n }), el("td", { text: p.ok ? "✔ OK" : p.rate_limited ? "⚠ Rate limited" : p.skipped ? "– Skipped" : "✖ " + (p.error || "Failed") }),
     el("td", { text: String(p.results ?? "–") }), el("td", { text: p.last_run ? new Date(p.last_run).toLocaleString() : "–" })));
@@ -156,7 +157,10 @@ function renderStatus() {
 }
 
 function tick() {
-  document.querySelectorAll(".card:not(.ended) [data-end]").forEach((n) => { if (n.dataset.end) n.textContent = timeLeft(n.dataset.end); });
+  document.querySelectorAll(".card:not(.ended) .ends").forEach((n) => {
+    const g = S.active.find((x) => x.id === n.closest(".card").dataset.id);
+    if (g && g.end_date) n.textContent = timeLeft(g.end_date);
+  });
 }
 
 async function load() {
@@ -189,16 +193,15 @@ function checkNew() {
 }
 
 function bind() {
-  ["#q", "#f-platform", "#f-ver", "#f-region", "#f-entry", "#sort"].forEach((s) => $(s).addEventListener("input", () => { S.shown = PAGE; render(); }));
+  ["#q", "#f-platform", "#f-ver", "#f-region", "#f-entry", "#sort"].forEach((s) => $(s).addEventListener("input", render));
   document.querySelectorAll("[data-quick]").forEach((b) => b.addEventListener("click", () => {
     const k = b.dataset.quick; S.quick.has(k) ? S.quick.delete(k) : S.quick.add(k);
-    b.setAttribute("aria-pressed", S.quick.has(k)); S.shown = PAGE; render();
+    b.setAttribute("aria-pressed", S.quick.has(k)); render();
   }));
   $("#favonly").addEventListener("click", (e) => { S.favOnly = !S.favOnly; e.target.setAttribute("aria-pressed", S.favOnly); render(); });
-  $("#more").addEventListener("click", () => { S.shown += PAGE; render(); });
   document.querySelectorAll(".tab").forEach((t) => t.addEventListener("click", () => {
     document.querySelectorAll(".tab").forEach((x) => x.classList.toggle("is-on", x === t));
-    S.view = t.dataset.view; S.shown = PAGE; render();
+    S.view = t.dataset.view; render();
   }));
   $("#notify").addEventListener("click", async (e) => {
     if (!("Notification" in window)) return alert("Your browser doesn't support notifications.");
