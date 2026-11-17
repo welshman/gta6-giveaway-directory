@@ -1,0 +1,49 @@
+name: Moderate
+
+on:
+  workflow_dispatch:
+    inputs:
+      action:
+        description: "approve | reject | remove | edit | block-domain | block-creator | trust-creator | purge-samples"
+        required: true
+      arg1:
+        description: "Listing ID (or domain / creator name)"
+        required: false
+      arg2:
+        description: "approve: Verified|Likely|Unverified. edit: field name"
+        required: false
+      arg3:
+        description: "edit: new value"
+        required: false
+
+permissions:
+  contents: write
+
+concurrency:
+  group: scan-giveaways
+  cancel-in-progress: false
+
+jobs:
+  moderate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install -r requirements.txt
+      - name: Run moderation command
+        env:
+          A0: ${{ inputs.action }}
+          A1: ${{ inputs.arg1 }}
+          A2: ${{ inputs.arg2 }}
+          A3: ${{ inputs.arg3 }}
+        run: |
+          args=("$A0"); [ -n "$A1" ] && args+=("$A1"); [ -n "$A2" ] && args+=("$A2"); [ -n "$A3" ] && args+=("$A3")
+          python scripts/moderate.py "${args[@]}"
+      - name: Commit
+        run: |
+          git config user.name "giveaway-bot"
+          git config user.email "giveaway-bot@users.noreply.github.com"
+          git add config data
+          if git diff --staged --quiet; then echo "No changes"; else git commit -m "moderation: ${{ inputs.action }} ${{ inputs.arg1 }}" && git pull --rebase && git push; fi
