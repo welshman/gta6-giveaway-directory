@@ -1,0 +1,11 @@
+{
+  "providers": {
+    "watch": {
+      "urls": [
+        { "url": "https://giveawaydrop.com/", "follow_links": true },
+        "https://giveawaydrop.com/giveaway/win-a-ps5-gta-6-ultimate-edition/"
+      ]
+    }
+  },
+  "allowed_domains": ["giveawaydrop.com"]
+}
