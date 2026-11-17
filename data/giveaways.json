@@ -1,0 +1,48 @@
+{
+  "updated_at": "2026-11-17T22:00:00Z",
+  "count": 3,
+  "repo": "welshman/gta6-giveaway-directory",
+  "giveaways": [
+    {
+      "id": "gv-sample0001", "sample": true,
+      "title": "GTA 6 Launch Week Giveaway – 3 Copies (PS5)",
+      "platform": "Twitch", "url": "https://www.twitch.tv/example_streamer",
+      "creator": "ExampleStreamer", "creator_url": "https://www.twitch.tv/example_streamer",
+      "prize": "3x GTA 6 digital codes (PS5)", "entry_method": ["Watch the stream", "Type !enter in chat"], "entry_types": ["watch-stream"],
+      "start_date": "2026-11-15T12:00:00Z", "end_date": "2026-11-30T20:00:00Z",
+      "region_text": "UK & EU only", "regions": ["uk", "eu"],
+      "verification": "Likely", "confidence": 78, "source": "twitch", "search_query": "GTA 6 giveaway",
+      "date_first_found": "2026-11-16T09:07:00Z", "date_last_checked": "2026-11-17T22:00:00Z", "date_last_seen": "2026-11-17T22:00:00Z", "date_expired": null,
+      "summary": "SAMPLE: Weekly stream giveaway. Winners drawn live from chat.", "thumbnail": null,
+      "tags": ["GTA 6", "Giveaway", "Twitch", "UK Eligible", "No purchase necessary"],
+      "status": "Active", "warnings": [], "trusted_source": false, "moderation_notes": "Sample data - delete me.", "report_count": 0, "duplicate_hash": "a1b2c3d4e5f60708", "fetch_failures": 0
+    },
+    {
+      "id": "gv-sample0002", "sample": true,
+      "title": "Win GTA VI on release day – Gleam entry",
+      "platform": "Website", "url": "https://gleam.io/example/gta-vi-giveaway",
+      "creator": "Example Gaming Blog", "creator_url": "https://example.com",
+      "prize": "GTA VI (platform of your choice)", "entry_method": ["Gleam form", "Follow on X", "Join Discord"], "entry_types": ["form", "follow", "join-discord"],
+      "start_date": null, "end_date": "2026-11-19T23:59:00Z",
+      "region_text": "Worldwide", "regions": ["international"],
+      "verification": "Verified", "confidence": 91, "source": "moderator", "search_query": null,
+      "date_first_found": "2026-11-10T10:00:00Z", "date_last_checked": "2026-11-17T22:00:00Z", "date_last_seen": "2026-11-17T22:00:00Z", "date_expired": null,
+      "summary": "SAMPLE: Entry form with published rules and a named organiser.", "thumbnail": null,
+      "tags": ["GTA 6", "Giveaway", "International", "Ends Soon"],
+      "status": "Active", "warnings": [], "trusted_source": true, "moderation_notes": "Sample data - delete me.", "report_count": 0, "duplicate_hash": "0f9e8d7c6b5a4938", "fetch_failures": 0
+    },
+    {
+      "id": "gv-sample0003", "sample": true,
+      "title": "Repost to win a GTA 6 code",
+      "platform": "X", "url": "https://x.com/example_creator/status/1000000000000000000",
+      "creator": "@example_creator", "creator_url": "https://x.com/example_creator",
+      "prize": "1x GTA 6 code", "entry_method": ["Follow", "Repost"], "entry_types": ["follow", "repost"],
+      "start_date": null, "end_date": null, "region_text": "", "regions": [],
+      "verification": "Unverified", "confidence": 71, "source": "brave", "search_query": "GTA 6 giveaway site:x.com",
+      "date_first_found": "2026-11-17T20:00:00Z", "date_last_checked": "2026-11-17T22:00:00Z", "date_last_seen": "2026-11-17T22:00:00Z", "date_expired": null,
+      "summary": "SAMPLE: No end date or rules shown. Check the post before entering.", "thumbnail": null,
+      "tags": ["GTA 6", "Giveaway", "X"],
+      "status": "Active", "warnings": ["No end date or rules found"], "trusted_source": false, "moderation_notes": "Sample data - delete me.", "report_count": 0, "duplicate_hash": "1122334455667788", "fetch_failures": 0
+    }
+  ]
+}

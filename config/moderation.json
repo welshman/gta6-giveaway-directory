@@ -1,0 +1,12 @@
+{
+  "auto_publish_threshold": 70,
+  "review_threshold": 40,
+  "auto_publish_status": "Likely",
+  "submissions_require_review": true,
+  "auto_hide_after_reports": 2,
+  "blocked_domains": [],
+  "blocked_creators": [],
+  "trusted_creators": [],
+  "rejected_urls": [],
+  "notes": {}
+}
