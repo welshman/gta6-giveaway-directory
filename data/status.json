@@ -1,36 +1,46 @@
 {
-  "updated_at": "2026-11-17T22:59:09Z",
+  "updated_at": "2026-11-17T23:16:31Z",
   "providers": {
     "brave": {
-      "last_run": "2026-11-17T22:59:06Z",
+      "last_run": "2026-11-17T23:12:59Z",
       "ok": false,
       "results": 0,
       "skipped": true,
       "error": "missing secret BRAVE_API_KEY"
     },
     "youtube": {
-      "last_run": "2026-11-17T22:59:06Z",
+      "last_run": "2026-11-17T23:12:59Z",
       "ok": false,
       "results": 0,
       "skipped": true,
       "error": "missing secret YOUTUBE_API_KEY"
     },
     "twitch": {
-      "last_run": "2026-11-17T22:59:06Z",
+      "last_run": "2026-11-17T23:12:59Z",
       "ok": false,
       "results": 0,
       "skipped": true,
       "error": "missing secret TWITCH_CLIENT_ID"
     },
     "rss": {
-      "last_run": "2026-11-17T22:59:06Z",
+      "last_run": "2026-11-17T23:13:04Z",
       "ok": true,
-      "results": 0
+      "results": 659
     },
     "watch": {
-      "last_run": "2026-11-17T22:59:07Z",
+      "last_run": "2026-11-17T23:14:05Z",
       "ok": true,
-      "results": 0
+      "results": 132
+    },
+    "curated": {
+      "last_run": "2026-11-17T23:12:59Z",
+      "ok": true,
+      "results": 2
+    },
+    "lemmy": {
+      "last_run": "2026-11-17T23:12:59Z",
+      "ok": true,
+      "results": 33
     }
   }
 }

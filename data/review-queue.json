@@ -1,4 +1,48 @@
 {
-  "updated_at": "2026-11-17T22:59:09Z",
-  "giveaways": []
+  "updated_at": "2026-11-17T23:16:31Z",
+  "giveaways": [
+    {
+      "id": "gv-77dc9426f3",
+      "title": "Tell us your favourite Grand Theft Auto gaming memory and win a copy of GTA 6",
+      "platform": "Website",
+      "url": "https://www.eurogamer.net/grand-theft-auto-gaming-memory-competition-gta-6-win",
+      "creator": "",
+      "creator_url": "",
+      "prize": "copy of GTA 6",
+      "entry_method": [
+        "Like"
+      ],
+      "entry_types": [
+        "like"
+      ],
+      "start_date": null,
+      "end_date": null,
+      "region_text": "",
+      "regions": [],
+      "verification": "Needs Review",
+      "confidence": 55,
+      "source": "rss:Eurogamer",
+      "search_query": null,
+      "date_first_found": "2026-11-17T23:16:30Z",
+      "date_last_checked": "2026-11-17T23:16:30Z",
+      "date_last_seen": "2026-11-17T23:16:30Z",
+      "date_expired": null,
+      "summary": "Hello! This piece is part of our GTA Week coverage here on Eurogamer, as we explore all things Grand Theft Auto across the launch period of the wildly anticipated Grand Theft Auto 6. For more like thi",
+      "thumbnail": null,
+      "tags": [
+        "GTA 6",
+        "Giveaway",
+        "Website"
+      ],
+      "status": "Needs Review",
+      "warnings": [
+        "No end date found"
+      ],
+      "trusted_source": false,
+      "moderation_notes": "",
+      "report_count": 0,
+      "duplicate_hash": "c12bb671c51a2a4b",
+      "fetch_failures": 0
+    }
+  ]
 }
