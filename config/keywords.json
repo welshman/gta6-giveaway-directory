@@ -3,10 +3,10 @@
   "gta_vi_terms": ["gta vi", "gtavi", "gta-vi"],
   "grand_theft_auto_terms": ["grand theft auto 6", "grand theft auto vi", "grand theft auto-6", "grand theft auto: vi"],
   "giveaway_terms": ["giveaway", "giveaways", "give away", "giving away", "gives away", "free copy", "free copies", "free game", "free code", "free codes", "win a copy", "code drop", "code drops", "key drop", "free key", "raffle", "raffles", "gleam", "sorteo", "sorteio", "gewinnspiel", "verlosung", "concours", "concorso", "konkurs", "çekiliş", "cekilis", "winactie", "розыгрыш", "プレゼント企画", "懸賞", "当選", "경품", "مسابقة"],
-  "contest_terms": ["contest", "contests", "competition"],
+  "contest_terms": ["contest", "contests", "competition", "competitions", "comp"],
   "sweepstake_terms": ["sweepstake", "sweepstakes", "prize draw"],
-  "scam_terms_hard": ["enter your password", "send me your password", "your password", "card number", "credit card", "cvv", "pay to enter", "entry fee", "send crypto", "send bitcoin", "seed phrase", "wallet connect", "login to claim", "log in to claim", "verify your account to claim", "gift card code required"],
-  "scam_terms_soft": ["download", "install the app", "apk", "complete a survey", "survey", "subscribe to unlock", "limited slots", "100% free", "claim now", "no verification", "dm me", "telegram", "whatsapp", "crypto", "shipping fee", "pay shipping"],
+  "scam_terms_hard": ["enter your password", "send me your password", "your password", "card number", "credit card", "cvv", "pay to enter", "entry fee", "buy tickets", "buy a ticket", "ticket price", "send crypto", "send bitcoin", "seed phrase", "wallet connect", "login to claim", "log in to claim", "verify your account to claim", "gift card code required"],
+  "scam_terms_soft": ["download", "install the app", "apk", "complete a survey", "survey", "subscribe to unlock", "limited slots", "100% free", "claim now", "no verification", "dm me", "telegram", "whatsapp", "crypto", "shipping fee", "pay shipping", "instant win tickets", "prize competition"],
   "region_terms": {
     "international": ["worldwide", "international", "global", "anywhere in the world", "open to all", "all countries"],
     "uk": ["uk only", "united kingdom", "uk eligible", "gb only", "uk residents", "great britain", "england", "scotland", "wales"],
@@ -44,7 +44,7 @@
     "nz": ["new zealand", "nz only", "nz residents"],
     "oceania": ["oceania", "anz"]
   },
-  "exclusion_terms": ["giveaway ended", "giveaway has ended", "giveaway closed", "giveaway is over", "winner announced", "winners announced", "winners have been", "no longer available", "not a giveaway", "this contest has ended"],
+  "exclusion_terms": ["giveaway ended", "giveaway has ended", "giveaway closed", "giveaway is over", "winner announced", "winners announced", "winners have been", "no longer available", "not a giveaway", "this contest has ended", "competition has closed", "competition is closed"],
   "positive_keywords": ["official rules", "terms and conditions", "no purchase necessary", "winner will be", "free to enter", "drawn randomly", "random winner", "ends on", "closing date"],
   "negative_keywords": ["guaranteed win", "everyone wins", "hack", "generator", "free v-bucks", "unlock all", "leaked download", "cracked"]
 }
