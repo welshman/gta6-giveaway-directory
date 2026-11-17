@@ -1,5 +1,5 @@
 """Shared helpers: JSON IO, time, URL normalising, HTTP with rate limiting."""
-import hashlib, json, os, re, time
+import glob, hashlib, json, os, re, time
 from datetime import datetime, timezone
 from urllib.parse import urlparse, parse_qsl, urlencode
 import requests
@@ -13,12 +13,31 @@ class MissingSecret(Exception): pass
 class ProviderError(Exception): pass
 
 
+def _merge(a, b):
+    """Merge config 'extra' files into the base: dicts merge, lists are added to (no duplicates), other values are overridden."""
+    if isinstance(a, dict) and isinstance(b, dict):
+        out = dict(a)
+        for k, v in b.items():
+            out[k] = _merge(a[k], v) if k in a else v
+        return out
+    if isinstance(a, list) and isinstance(b, list):
+        return a + [x for x in b if x not in a]
+    return b
+
+
 def load(rel, default=None):
+    """Load a JSON file. For config/NAME.json, any config/NAME-*.json files are merged in too,
+    so you can add sources/queries/keywords in small extra files without touching the base file."""
     try:
         with open(os.path.join(ROOT, rel), encoding="utf-8") as f:
-            return json.load(f)
+            data = json.load(f)
     except FileNotFoundError:
         return default
+    if rel.startswith("config/") and rel.endswith(".json") and rel != "config/moderation.json":
+        for extra in sorted(glob.glob(os.path.join(ROOT, rel[:-5] + "-*.json"))):
+            with open(extra, encoding="utf-8") as f:
+                data = _merge(data, json.load(f))
+    return data
 
 
 def save(rel, data):

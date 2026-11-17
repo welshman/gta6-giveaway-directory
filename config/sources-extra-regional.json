@@ -1,0 +1,26 @@
+{
+  "providers": {
+    "rss": {
+      "feeds": [
+        { "name": "Reddit r/gta6_official", "url": "https://www.reddit.com/r/gta6_official/new/.rss" },
+        { "name": "Eurogamer", "url": "https://www.eurogamer.net/feed", "review_only": true }
+      ]
+    },
+    "watch": {
+      "urls": [
+        { "url": "https://www.aussiecomps.com/", "follow_links": true },
+        { "url": "https://www.aussiecomps.com/index.php?cat_id=2", "follow_links": true },
+        { "url": "https://www.competitions.com.au/", "follow_links": true },
+        { "url": "https://compingclub.com/", "follow_links": true },
+        { "url": "https://www.canadianfreestuff.com/canadian-contests/", "follow_links": true },
+        { "url": "https://www.contestcanada.net/", "follow_links": true },
+        { "url": "https://free.ca/contests/", "follow_links": true },
+        { "url": "https://www.savealoonie.com/contest-giveaways/", "follow_links": true },
+        { "url": "https://www.contestscoop.com/", "follow_links": true },
+        { "url": "https://www.contestgirl.com/", "follow_links": true },
+        { "url": "https://www.freestufftimes.com/contests/", "follow_links": true }
+      ]
+    }
+  },
+  "allowed_domains": ["aussiecomps.com", "competitions.com.au", "compingclub.com", "canadianfreestuff.com", "contestcanada.net", "free.ca", "savealoonie.com", "contestscoop.com", "freestufftimes.com", "instant-gaming.com"]
+}

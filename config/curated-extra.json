@@ -1,0 +1,22 @@
+{
+  "giveaways": [
+    {
+      "url": "https://x.com/InstantGamingEN/status/2122238246298268103",
+      "title": "Instant Gaming – win a PS5 and GTA VI",
+      "platform": "X",
+      "creator": "Instant Gaming (@InstantGamingEN)",
+      "creator_url": "https://x.com/InstantGamingEN",
+      "prize": "1 PS5 and 1 copy of GTA VI",
+      "entry_method": ["Follow @instantgamingen", "Share (repost) the post", "Tag a friend", "Enter via the link on Instant Gaming's site"],
+      "entry_types": ["follow", "repost", "tag-friends", "form"],
+      "start_date": "2026-11-16T08:00:00Z",
+      "end_date": null,
+      "region_text": "",
+      "regions": [],
+      "verification": "Likely",
+      "summary": "Retailer giveaway posted 16 Nov. The post shows no end date or rules, so read the rules on instant-gaming.com before entering.",
+      "warnings": ["No end date shown", "Check the rules on the Instant Gaming link first"],
+      "trusted_source": false
+    }
+  ]
+}
