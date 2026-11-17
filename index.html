@@ -48,7 +48,7 @@
     <div class="row">
       <label>Platform <select id="f-platform"><option value="all">All</option></select></label>
       <label>Trust <select id="f-ver"><option value="all">All</option><option>Verified</option><option>Likely</option><option>Unverified</option></select></label>
-      <label>Region <select id="f-region"><option value="all">All</option><option value="uk">UK eligible</option><option value="international">International</option><option value="us">US</option><option value="eu">EU</option></select></label>
+      <label>Region <select id="f-region"><option value="all">All regions</option></select></label>
       <label>How to enter <select id="f-entry"><option value="all">Any</option><option value="follow">Follow</option><option value="comment">Comment</option><option value="repost">Repost</option><option value="subscribe">Subscribe</option><option value="join-discord">Join Discord</option><option value="form">Form / Gleam</option><option value="watch-stream">Watch stream</option></select></label>
       <label>Sort <select id="sort"><option value="ending">Ending soonest</option><option value="newest">Newest</option><option value="verified">Recently checked</option><option value="az">A–Z</option></select></label>
     </div>
@@ -81,18 +81,6 @@
       <li><span class="badge v-unverified">? Unverified</span> Added, but we couldn't check much. Take extra care.</li>
       <li><span class="badge v-expired">✖ Expired</span> Ended or removed. You can no longer enter.</li>
     </ul>
-  </section>
-
-  <section class="suggest" aria-labelledby="sg-h">
-    <h2 id="sg-h">Suggest a giveaway</h2>
-    <p>This opens a pre-filled GitHub Issue. A moderator reviews it before it appears here.</p>
-    <form id="suggest">
-      <label>Giveaway link <input name="url" type="url" required placeholder="https://…"></label>
-      <label>Title <input name="title" required maxlength="120"></label>
-      <label>Creator <input name="creator" maxlength="80"></label>
-      <label>Ends (if known) <input name="ends" maxlength="60" placeholder="e.g. 30 Nov 2026 18:00 GMT"></label>
-      <button class="btn" type="submit">Send suggestion</button>
-    </form>
   </section>
 </div>
 </main>

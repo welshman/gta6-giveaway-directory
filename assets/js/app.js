@@ -3,6 +3,27 @@
 const REPO = "welshman/gta6-giveaway-directory";
 const PAGE = 12;
 const ICONS = {Twitch:"🟣",Kick:"🟢",X:"✖️",YouTube:"▶️",Discord:"💬",Reddit:"🟠",Instagram:"📸",TikTok:"🎵",Facebook:"📘",Website:"🌐"};
+
+// Region keys must match config/keywords.json > region_terms. [key, label, parent regions]
+const REGIONS = [
+  ["international", "🌍 Worldwide / International", []],
+  ["uk", "United Kingdom", ["europe"]], ["ie", "Ireland", ["europe", "eu"]],
+  ["us", "United States", []], ["ca", "Canada", []], ["mx", "Mexico", ["latam"]],
+  ["latam", "Latin America", []], ["br", "Brazil", ["latam"]],
+  ["eu", "European Union", ["europe"]], ["europe", "Europe (all)", []],
+  ["de", "Germany", ["eu", "europe"]], ["fr", "France", ["eu", "europe"]], ["es", "Spain", ["eu", "europe"]],
+  ["it", "Italy", ["eu", "europe"]], ["nl", "Netherlands / Benelux", ["eu", "europe"]], ["pl", "Poland", ["eu", "europe"]],
+  ["nordics", "Nordics", ["europe"]], ["tr", "Turkey", ["europe"]],
+  ["me", "Middle East & North Africa", []], ["ae", "United Arab Emirates", ["me"]], ["sa", "Saudi Arabia", ["me"]],
+  ["africa", "Africa", []], ["za", "South Africa", ["africa"]], ["ng", "Nigeria", ["africa"]],
+  ["asia", "Asia-Pacific", []], ["in", "India", ["asia"]], ["jp", "Japan", ["asia"]], ["kr", "South Korea", ["asia"]],
+  ["cn", "China / Hong Kong / Taiwan", ["asia"]], ["sea", "Southeast Asia", ["asia"]],
+  ["ph", "Philippines", ["sea", "asia"]], ["id", "Indonesia", ["sea", "asia"]],
+  ["au", "Australia", ["oceania"]], ["nz", "New Zealand", ["oceania"]], ["oceania", "Oceania", []],
+];
+const REGION_LABEL = Object.fromEntries(REGIONS.map(([k, l]) => [k, l.replace(/^🌍 /, "")]));
+const PARENTS = Object.fromEntries(REGIONS.map(([k, , p]) => [k, p]));
+
 const $ = (s) => document.querySelector(s);
 const el = (tag, props = {}, ...kids) => {
   const n = document.createElement(tag);
@@ -31,6 +52,13 @@ function timeLeft(iso) {
 }
 const verLabel = (v) => ({Verified:"✔ Verified",Likely:"◐ Likely",Unverified:"? Unverified",Expired:"✖ Expired"}[v] || "? " + v);
 const issueUrl = (type, g) => `https://github.com/${REPO}/issues/new?labels=report&title=${encodeURIComponent(`[Report:${type}] ${g.id}`)}&body=${encodeURIComponent(`ID: ${g.id}\nType: ${type}\nURL: ${g.url}\n\nDetails (optional):\n`)}`;
+const regionText = (g) => g.region_text || (g.regions || []).map((r) => REGION_LABEL[r] || r).join(", ");
+
+function regionMatches(g, rf) {
+  const set = new Set(g.regions || []);
+  if (set.has(rf) || set.has("international")) return true;
+  return (PARENTS[rf] || []).some((p) => set.has(p));
+}
 
 function card(g, ended) {
   const link = safeUrl(g.url);
@@ -43,7 +71,7 @@ function card(g, ended) {
     el("h3", { text: g.title }),
     el("dl", {},
       row("By", g.creator), row("Prize", g.prize), row("Enter", (g.entry_method || []).join(", ")),
-      row("Region", g.region_text || ((g.regions || []).join(", "))),
+      row("Region", regionText(g)),
       [el("dt", { text: "Ends" }), el("dd", { class: "ends", "data-end": g.end_date || "", text: ended ? "Ended – can't enter" : timeLeft(g.end_date) })]),
     g.summary ? el("p", { text: g.summary }) : null,
     ...(g.warnings || []).map((w) => el("p", { class: "warn", text: "⚠ " + w })),
@@ -74,11 +102,11 @@ function filtered(list) {
   const pf = $("#f-platform").value, vf = $("#f-ver").value, rf = $("#f-region").value, ef = $("#f-entry").value;
   const now = Date.now();
   return list.filter((g) => {
-    const hay = lower([g.title, g.creator, g.platform, g.prize, g.summary, (g.tags || []).join(" "), (g.entry_method || []).join(" ")].join(" "));
+    const hay = lower([g.title, g.creator, g.platform, g.prize, g.summary, regionText(g), (g.tags || []).join(" "), (g.entry_method || []).join(" ")].join(" "));
     if (!q.every((w) => hay.includes(w))) return false;
     if (pf !== "all" && g.platform !== pf) return false;
     if (vf !== "all" && g.verification !== vf) return false;
-    if (rf !== "all" && !((g.regions || []).includes(rf) || (rf === "uk" && (g.regions || []).includes("international")))) return false;
+    if (rf !== "all" && !regionMatches(g, rf)) return false;
     if (ef !== "all" && !(g.entry_types || []).includes(ef)) return false;
     if (S.favOnly && !S.favs.has(g.id)) return false;
     const end = g.end_date ? new Date(g.end_date) - now : null;
@@ -120,8 +148,8 @@ function render() {
 function renderStatus() {
   const b = $("#status-body"); b.replaceChildren();
   const st = S.status;
-  if (!st) return b.append(el("p", { text: "No status data yet." }));
-  const rows = Object.entries(st.providers || {}).map(([n, p]) => el("tr", {},
+  if (!st || !Object.keys(st.providers || {}).length) return b.append(el("p", { text: "No scans recorded yet." }));
+  const rows = Object.entries(st.providers).map(([n, p]) => el("tr", {},
     el("td", { text: n }), el("td", { text: p.ok ? "✔ OK" : p.rate_limited ? "⚠ Rate limited" : p.skipped ? "– Skipped" : "✖ " + (p.error || "Failed") }),
     el("td", { text: String(p.results ?? "–") }), el("td", { text: p.last_run ? new Date(p.last_run).toLocaleString() : "–" })));
   b.append(el("table", {}, el("thead", {}, el("tr", {}, ["Source", "Status", "Results", "Last scanned"].map((h) => el("th", { text: h })))), el("tbody", {}, rows)));
@@ -143,6 +171,7 @@ async function load() {
     $("#updated").textContent = g.updated_at ? new Date(g.updated_at).toLocaleString([], { dateStyle: "medium", timeStyle: "short" }) : "unknown";
     $("#updated").setAttribute("datetime", g.updated_at || "");
     [...new Set(S.active.map((x) => x.platform))].sort().forEach((p) => $("#f-platform").append(el("option", { value: p, text: p })));
+    REGIONS.forEach(([k, label]) => $("#f-region").append(el("option", { value: k, text: label })));
     $("#loading").hidden = true;
     checkNew();
     render();
@@ -181,12 +210,6 @@ function bind() {
   $("#theme").addEventListener("click", () => {
     const t = document.documentElement.dataset.theme === "dark" ? "light" : "dark";
     document.documentElement.dataset.theme = t; localStorage.setItem("theme", t);
-  });
-  $("#suggest").addEventListener("submit", (e) => {
-    e.preventDefault();
-    const f = new FormData(e.target);
-    const body = `URL: ${f.get("url")}\nTitle: ${f.get("title")}\nCreator: ${f.get("creator") || ""}\nEnds: ${f.get("ends") || ""}\n`;
-    window.open(`https://github.com/${REPO}/issues/new?labels=submission&title=${encodeURIComponent("[Submission] " + f.get("title"))}&body=${encodeURIComponent(body)}`, "_blank", "noopener,noreferrer");
   });
 }
 

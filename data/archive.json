@@ -1,5 +1,1 @@
-{ "updated_at": "2026-11-17T22:00:00Z", "giveaways": [
-  { "id": "gv-sample0000", "sample": true, "title": "SAMPLE: Ended GTA 6 trailer-watch giveaway", "platform": "YouTube", "url": "https://www.youtube.com/watch?v=example",
-    "creator": "Example Channel", "prize": "1x GTA 6 code", "entry_method": ["Comment"], "entry_types": ["comment"], "end_date": "2026-11-14T18:00:00Z",
-    "verification": "Expired", "confidence": 74, "date_first_found": "2026-11-10T08:00:00Z", "date_expired": "2026-11-14T18:00:00Z",
-    "status": "Expired", "tags": ["GTA 6", "Giveaway", "YouTube"], "warnings": [], "report_count": 0, "moderation_notes": "Sample data." } ] }
+{ "updated_at": "2026-11-17T22:55:00Z", "giveaways": [] }
