@@ -1,0 +1,38 @@
+{
+  "providers": {
+    "exa":        { "enabled": false, "api_key_env": "EXA_API_KEY", "max_queries_per_run": 4, "count": 10, "days": 14, "note": "Neural search with its own index. Roughly $4-7 per 1,000 searches, plus a monthly free credit." },
+    "tavily":     { "enabled": false, "api_key_env": "TAVILY_API_KEY", "max_queries_per_run": 4, "count": 10, "note": "1,000 free credits a month, then about $8 per 1,000." },
+    "perplexity": { "enabled": false, "api_key_env": "PERPLEXITY_API_KEY", "max_queries_per_run": 4, "count": 10, "note": "Perplexity Search API. About $5 per 1,000 requests ($1 with Fast Search)." },
+    "serpapi":    { "enabled": false, "api_key_env": "SERPAPI_KEY", "engines": ["google", "bing"], "max_queries_per_run": 1, "note": "Google, Bing, DuckDuckGo, Yandex, Yahoo, Baidu, Naver results as JSON. 1 query x 2 engines x 24 runs x 30 days = 1,440 searches a month. Check cost and terms first." },
+    "marginalia": { "enabled": false, "api_key_env": "MARGINALIA_API_KEY", "max_queries_per_run": 2, "note": "Free. Uses the shared 'public' key unless you set your own. Experimental." },
+    "rss": {
+      "feeds": [
+        { "name": "Google News: GTA 6 giveaway (US)", "url": "https://news.google.com/rss/search?q=GTA+6+giveaway&hl=en-US&gl=US&ceid=US:en", "review_only": true },
+        { "name": "Google News: GTA VI giveaway (US)", "url": "https://news.google.com/rss/search?q=GTA+VI+giveaway&hl=en-US&gl=US&ceid=US:en", "review_only": true },
+        { "name": "Google News: GTA 6 competition (US)", "url": "https://news.google.com/rss/search?q=GTA+6+competition&hl=en-US&gl=US&ceid=US:en", "review_only": true },
+        { "name": "Google News: GTA 6 free copy (US)", "url": "https://news.google.com/rss/search?q=GTA+6+free+copy&hl=en-US&gl=US&ceid=US:en", "review_only": true },
+        { "name": "Google News: GTA 6 giveaway (UK)", "url": "https://news.google.com/rss/search?q=GTA+6+giveaway&hl=en-GB&gl=GB&ceid=GB:en", "review_only": true },
+        { "name": "Google News: GTA 6 competition (UK)", "url": "https://news.google.com/rss/search?q=GTA+6+competition&hl=en-GB&gl=GB&ceid=GB:en", "review_only": true },
+        { "name": "Google News: GTA 6 giveaway (AU)", "url": "https://news.google.com/rss/search?q=GTA+6+giveaway&hl=en-AU&gl=AU&ceid=AU:en", "review_only": true },
+        { "name": "Google News: GTA 6 giveaway (CA)", "url": "https://news.google.com/rss/search?q=GTA+6+giveaway&hl=en-CA&gl=CA&ceid=CA:en", "review_only": true },
+        { "name": "Google News: GTA 6 giveaway (IN)", "url": "https://news.google.com/rss/search?q=GTA+6+giveaway&hl=en-IN&gl=IN&ceid=IN:en", "review_only": true },
+        { "name": "Google News: GTA 6 giveaway (IE)", "url": "https://news.google.com/rss/search?q=GTA+6+giveaway&hl=en-IE&gl=IE&ceid=IE:en", "review_only": true },
+        { "name": "Google News: GTA 6 giveaway (NZ)", "url": "https://news.google.com/rss/search?q=GTA+6+giveaway&hl=en-NZ&gl=NZ&ceid=NZ:en", "review_only": true },
+        { "name": "Google News: GTA 6 giveaway (ZA)", "url": "https://news.google.com/rss/search?q=GTA+6+giveaway&hl=en-ZA&gl=ZA&ceid=ZA:en", "review_only": true },
+        { "name": "Google News: GTA 6 giveaway (SG)", "url": "https://news.google.com/rss/search?q=GTA+6+giveaway&hl=en-SG&gl=SG&ceid=SG:en", "review_only": true },
+        { "name": "Google News: GTA 6 giveaway (PH)", "url": "https://news.google.com/rss/search?q=GTA+6+giveaway&hl=en-PH&gl=PH&ceid=PH:en", "review_only": true },
+        { "name": "Google News: GTA 6 Gewinnspiel (DE)", "url": "https://news.google.com/rss/search?q=GTA+6+Gewinnspiel&hl=de&gl=DE&ceid=DE:de", "review_only": true },
+        { "name": "Google News: GTA 6 concours (FR)", "url": "https://news.google.com/rss/search?q=GTA+6+concours&hl=fr&gl=FR&ceid=FR:fr", "review_only": true },
+        { "name": "Google News: GTA 6 sorteo (ES)", "url": "https://news.google.com/rss/search?q=GTA+6+sorteo&hl=es&gl=ES&ceid=ES:es", "review_only": true },
+        { "name": "Google News: GTA 6 sorteo (MX)", "url": "https://news.google.com/rss/search?q=GTA+6+sorteo&hl=es-419&gl=MX&ceid=MX:es-419", "review_only": true },
+        { "name": "Google News: GTA 6 sorteio (BR)", "url": "https://news.google.com/rss/search?q=GTA+6+sorteio&hl=pt-BR&gl=BR&ceid=BR:pt-419", "review_only": true },
+        { "name": "Google News: GTA 6 concorso (IT)", "url": "https://news.google.com/rss/search?q=GTA+6+concorso&hl=it&gl=IT&ceid=IT:it", "review_only": true },
+        { "name": "Google News: GTA 6 winactie (NL)", "url": "https://news.google.com/rss/search?q=GTA+6+winactie&hl=nl&gl=NL&ceid=NL:nl", "review_only": true },
+        { "name": "Google News: GTA 6 konkurs (PL)", "url": "https://news.google.com/rss/search?q=GTA+6+konkurs&hl=pl&gl=PL&ceid=PL:pl", "review_only": true },
+        { "name": "Google News: GTA 6 cekilis (TR)", "url": "https://news.google.com/rss/search?q=GTA+6+cekilis&hl=tr&gl=TR&ceid=TR:tr", "review_only": true },
+        { "name": "Google News: GTA 6 giveaway (JP)", "url": "https://news.google.com/rss/search?q=GTA+6+%E3%83%97%E3%83%AC%E3%82%BC%E3%83%B3%E3%83%88&hl=ja&gl=JP&ceid=JP:ja", "review_only": true }
+      ]
+    }
+  },
+  "no_fetch_domains": ["news.google.com"]
+}
