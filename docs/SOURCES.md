@@ -1,30 +1,35 @@
 # Sources the scanner uses
 
-Last reviewed: 17 Nov 2026. Platforms change their rules often, so recheck before relying on any of these.
+Last reviewed: 17 Nov 2026. Platforms change their rules often, so recheck before relying on any of these. Failed sources show on the site's Status tab.
 
-## Runs with no keys (already enabled)
+## Runs with no keys (enabled)
 | Source | How | Notes |
 |---|---|---|
-| `config/curated.json` | Hand-picked | Published instantly. Currently Kick's Sunset Reward Case and GTA BOOM's launch-day draw. |
-| GamerPower RSS (all, PlayStation, Xbox) | RSS | Giveaway aggregator. Publishes official RSS feeds. |
-| Reddit subreddit RSS (r/giveaways, r/GrandTheftAutoVI, r/GamesGiveaway, r/FreeGameFindings, r/GiftofGames, r/giveawaysforgaming, r/FreeGameGiveaway, r/steam_giveaway, r/RandomActsOfGaming) + 3 search feeds | RSS | Reddit may block or rate-limit GitHub's servers. If the Status tab shows no results, use the Reddit API provider instead. |
-| Mastodon hashtag RSS (#gta6, #gtavi, #gta6giveaway, #giveaway, #giveaways) | RSS | Every public Mastodon hashtag has a feed. Add more instances in `sources.json`. |
-| Gaming news RSS (PC Gamer, Kotaku, Polygon, RPS, Eurogamer, GamesRadar, PlayStation Blog, Xbox Wire, Ars Technica Gaming, Gamer Guides GTA VI hub) | RSS | `review_only`: an article about a giveaway is not the giveaway, so these go to the review queue and a moderator fixes the link. |
-| Watch list (GTA BOOM, TheGiveaway.com, GamerPower) | Polite page reads | robots.txt respected. |
+| `config/curated.json` | Hand-picked | Published instantly. Add entries you have checked yourself. |
+| GamerPower RSS (all, PlayStation, Xbox, Steam) | RSS | Giveaway aggregator with official RSS feeds. |
+| Reddit subreddit RSS: giveaways, sweepstakes, pcgiveaways, GiveawaysOnDiscord, xboxgiveaways, freebies, GrandTheftAutoVI, GamesGiveaway, FreeGameFindings, GiftofGames, giveawaysforgaming, FreeGameGiveaway, steam_giveaway, RandomActsOfGaming | RSS | Reddit may block or rate-limit GitHub's servers. If results are empty, switch on the Reddit API provider. |
+| Reddit search RSS (GTA 6 / GTA VI giveaway, free code, raffle) and in-subreddit searches (PS5, xboxone, gaming, GTA, gtaonline) | RSS | Same caveat. |
+| Steam group RSS: GrabFreeGames, FREE GAMES! GIVEAWAYS!, IndieGala | RSS | Low odds for GTA 6 but cheap. |
+| Mastodon hashtag RSS on mastodon.social, mastodon.online, mstdn.social | RSS | #gta6, #gtavi, #gta6giveaway, #gtavigiveaway, #giveaway, #giveaways, #sweepstakes, #contest, #rockstargames, #grandtheftauto. Add any instance and tag with the same URL pattern. |
+| Lemmy search (lemmy.world, lemmy.ml, sh.itjust.works) | Public API | Experimental. |
+| Gaming news RSS (10 sites) | RSS | `review_only`. Every match goes to the review queue so a person finds the real giveaway link. |
+| Watch list with link-following: TheGiveaway.com, GamerPower, Gleam giveaways, GiveOwl, Sweepstakes Radar, Sweeties Sweeps, GTA BOOM coverage and news, GTA6-forum blog | Polite page reads | Reads each page, follows only links that mention GTA 6 / GTA VI, then checks those pages. robots.txt respected. JavaScript-only pages may return nothing. |
 
 ## Needs an API key
 | Source | Secret(s) | Cost / limits |
 |---|---|---|
-| Brave Search (~100 queries incl. site: and 15 languages) | `BRAVE_API_KEY` | About $5 per 1,000 searches, with $5 free credit each month. |
-| YouTube Data API | `YOUTUBE_API_KEY` | Free quota; each search uses 100 of 10,000 daily units. |
+| Brave Search (about 150 queries incl. `site:` for 40+ sites and 15 languages) | `BRAVE_API_KEY` | About $5 per 1,000 searches, $5 free credit monthly. |
+| YouTube Data API | `YOUTUBE_API_KEY` | Free quota. Each search costs 100 of 10,000 daily units. |
 | Twitch Helix | `TWITCH_CLIENT_ID`, `TWITCH_CLIENT_SECRET` | Free. |
-| Reddit API (disabled) | `REDDIT_CLIENT_ID`, `REDDIT_CLIENT_SECRET` | Free tier needs approval. |
-| Bluesky (disabled, experimental) | `BSKY_HANDLE`, `BSKY_APP_PASSWORD` | Post search needs a logged-in session. Use an App Password. |
+| Mojeek (disabled, experimental) | `MOJEEK_API_KEY` | Check their API terms and price. |
+| Reddit API (disabled) | `REDDIT_CLIENT_ID`, `REDDIT_CLIENT_SECRET` | Free tier may need approval. |
+| Bluesky (disabled, experimental) | `BSKY_HANDLE`, `BSKY_APP_PASSWORD` | Post search needs login. Use an App Password. |
 | X API (disabled) | `X_BEARER_TOKEN` | Paid tier. |
 | Serper (disabled) | `SERPER_API_KEY` | Paid third-party Google results. |
 
-## Not scanned directly
-Kick (no public search; found via Brave `site:kick.com` and the curated list), Discord, Instagram, TikTok, Facebook, Threads, Telegram. Their terms restrict scraping. They appear only if a search API returns them.
+## Reached only through search results
+Kick, Discord (including Disboard and Top.gg server lists), Instagram, TikTok, Facebook, Threads, Telegram, link-in-bio pages (Linktree, Beacons, Carrd, bio.link, solo.to, lnk.bio, allmylinks, taplink, linkin.bio). Their terms restrict scraping, so we never fetch these pages directly. Add confirmed ones to `config/curated.json`.
 
-## Adding more
-See the README section "Adding things". Put verified hand-picked giveaways in `config/curated.json`.
+## Not possible
+- Rockstar Newswire has no RSS feed, and third-party trackers scrape it, so it isn't used.
+- Facebook groups, private Discords, and anything behind a login.

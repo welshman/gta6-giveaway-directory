@@ -1,11 +1,15 @@
 """Discovery providers. Each takes (provider_config, queries, http, sources) and returns a list of candidates.
 To add a provider: write a function, decorate with @provider("name"), add a block to config/sources.json."""
-import os
-from defusedxml import ElementTree as ET
-from .util import now, iso, load, strip_html, MissingSecret, ProviderError
+import os, re
 from datetime import timedelta
+from urllib.parse import urljoin
+from bs4 import BeautifulSoup
+from defusedxml import ElementTree as ET
+from .analyze import fetch_page
+from .util import now, iso, load, strip_html, MissingSecret, ProviderError
 
 PROVIDERS = {}
+GTA_RE = re.compile(r"gta\s*-?\s*(6|vi)\b|grand\s+theft\s+auto\s*:?\s*-?\s*(6|vi)\b", re.I)
 
 
 def provider(name):
@@ -61,6 +65,19 @@ def brave(p, qs, http, src):
             raise ProviderError(f"HTTP {r.status_code}")
         for it in r.json().get("web", {}).get("results", []):
             out.append(cand(it["url"], it.get("title", ""), it.get("description", ""), "brave", q))
+    return out
+
+
+@provider("mojeek")
+def mojeek(p, qs, http, src):
+    """Experimental: Mojeek Search API (independent index)."""
+    key, out = secret(p, "api_key_env"), []
+    for q in pick(qs["web_queries"], p.get("max_queries_per_run", 6)):
+        r = http.get("https://www.mojeek.com/search", params={"q": q, "fmt": "json", "api_key": key})
+        if r.status_code != 200:
+            raise ProviderError(f"HTTP {r.status_code}")
+        for it in r.json().get("response", {}).get("results", []):
+            out.append(cand(it["url"], it.get("title", ""), it.get("desc", ""), "mojeek", q))
     return out
 
 
@@ -143,6 +160,27 @@ def twitch(p, qs, http, src):
     return out
 
 
+@provider("lemmy")
+def lemmy(p, qs, http, src):
+    """Lemmy public search API, tried on each listed instance. Experimental."""
+    out, errors = [], []
+    for inst in p.get("instances", []):
+        try:
+            for q in pick(qs["api_queries"], p.get("max_queries_per_run", 2)):
+                r = http.get(f"https://{inst}/api/v3/search", params={"q": q, "type_": "Posts", "sort": "New", "limit": 20})
+                if r.status_code != 200:
+                    raise ProviderError(f"{inst} HTTP {r.status_code}")
+                for it in r.json().get("posts", []):
+                    po = it["post"]
+                    out.append(cand(po.get("ap_id") or po["url"], po.get("name", ""), po.get("body") or "", "lemmy:" + inst, q,
+                                    creator=it.get("creator", {}).get("name", ""), platform="Lemmy"))
+        except Exception as e:
+            errors.append(str(e))
+    if not out and errors:
+        raise ProviderError(errors[0])
+    return out
+
+
 @provider("bluesky")
 def bluesky(p, qs, http, src):
     """Experimental. Post search needs a logged-in session (use an App Password, never your main password)."""
@@ -209,5 +247,23 @@ def rss(p, qs, http, src):
 
 @provider("watch")
 def watch(p, qs, http, src):
-    """Your own list of creator/landing pages. Page text is read later by the analyser."""
-    return [cand(u, "", "", "watch-list") for u in p.get("urls", [])]
+    """Your own list of pages. A plain URL is checked directly. {"url":..., "follow_links":true} reads a
+    listing page and returns every link that mentions GTA 6 / GTA VI for the analyser to check."""
+    out = []
+    for item in p.get("urls", []):
+        cfg = item if isinstance(item, dict) else {"url": item}
+        if not cfg.get("follow_links"):
+            out.append(cand(cfg["url"], "", "", "watch-list"))
+            continue
+        pg = fetch_page(http, cfg["url"])
+        if pg["status"] != 200 or not pg["html"]:
+            continue
+        seen = set()
+        for a in BeautifulSoup(pg["html"], "html.parser").find_all("a", href=True):
+            text, href = a.get_text(" ", strip=True), urljoin(pg["final_url"], a["href"])
+            if not href.startswith("http") or href in seen:
+                continue
+            if GTA_RE.search(text) or GTA_RE.search(href.replace("-", " ").replace("_", " ")):
+                seen.add(href)
+                out.append(cand(href, text, text, "watch-links:" + cfg["url"]))
+    return out
