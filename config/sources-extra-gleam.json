@@ -1,0 +1,21 @@
+{
+  "providers": {
+    "rss": {
+      "feeds": [
+        { "name": "Dexerto", "url": "https://www.dexerto.com/feed/", "review_only": true }
+      ]
+    },
+    "watch": {
+      "urls": [
+        { "url": "https://gleamfinder.com/category/gaming/", "follow_links": true },
+        { "url": "https://gleamfinder.com/category/international/", "follow_links": true },
+        { "url": "https://gleamfinder.com/host/gleamio", "follow_links": true },
+        { "url": "https://gleamgiveaways.com/", "follow_links": true },
+        { "url": "https://www.ozbargain.com.au/competition", "follow_links": true },
+        { "url": "https://www.hellorayo.co.uk/kisstory/competitions", "follow_links": true },
+        { "url": "https://www.hellorayo.co.uk/kiss/competitions", "follow_links": true }
+      ]
+    }
+  },
+  "allowed_domains": ["gleamfinder.com", "gleamgiveaways.com", "ozbargain.com.au", "hellorayo.co.uk"]
+}
