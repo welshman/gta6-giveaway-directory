@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-17T23:16:31Z",
+  "updated_at": "2026-11-17T23:27:58Z",
   "giveaways": [
     {
       "id": "gv-77dc9426f3",
@@ -25,7 +25,7 @@
       "search_query": null,
       "date_first_found": "2026-11-17T23:16:30Z",
       "date_last_checked": "2026-11-17T23:16:30Z",
-      "date_last_seen": "2026-11-17T23:16:30Z",
+      "date_last_seen": "2026-11-17T23:27:57Z",
       "date_expired": null,
       "summary": "Hello! This piece is part of our GTA Week coverage here on Eurogamer, as we explore all things Grand Theft Auto across the launch period of the wildly anticipated Grand Theft Auto 6. For more like thi",
       "thumbnail": null,
@@ -42,6 +42,178 @@
       "moderation_notes": "",
       "report_count": 0,
       "duplicate_hash": "c12bb671c51a2a4b",
+      "fetch_failures": 0
+    },
+    {
+      "id": "gv-6dab29b4af",
+      "title": "Phantom Blade: Zero devs couldn't care less about releasing near GTA 6: 'We don't even think of the competition, what matters is how polishe",
+      "platform": "Lemmy",
+      "url": "https://lemmy.today/post/54636676",
+      "creator": "sanitation",
+      "creator_url": "",
+      "prize": "",
+      "entry_method": [],
+      "entry_types": [],
+      "start_date": null,
+      "end_date": null,
+      "region_text": "",
+      "regions": [],
+      "verification": "Needs Review",
+      "confidence": 45,
+      "source": "lemmy:lemmy.world",
+      "search_query": "GTA 6 competition",
+      "date_first_found": "2026-11-17T23:26:20Z",
+      "date_last_checked": "2026-11-17T23:26:20Z",
+      "date_last_seen": "2026-11-17T23:26:55Z",
+      "date_expired": null,
+      "summary": "",
+      "thumbnail": null,
+      "tags": [
+        "GTA 6",
+        "Giveaway",
+        "Lemmy"
+      ],
+      "status": "Needs Review",
+      "warnings": [
+        "No end date found"
+      ],
+      "trusted_source": false,
+      "moderation_notes": "",
+      "report_count": 0,
+      "duplicate_hash": "c15cae330dd43cef",
+      "fetch_failures": 0
+    },
+    {
+      "id": "gv-633e6d6807",
+      "title": "Take-Two CEO stresses that GTA 6's delay is necessary to 'make the best thing anyone's ever seen' even though he doesn't 'play videogames at",
+      "platform": "Lemmy",
+      "url": "https://rss.ponder.cat/post/185481",
+      "creator": "free",
+      "creator_url": "",
+      "prize": "",
+      "entry_method": [
+        "Follow",
+        "Watch the stream"
+      ],
+      "entry_types": [
+        "follow",
+        "watch-stream"
+      ],
+      "start_date": null,
+      "end_date": null,
+      "region_text": "",
+      "regions": [],
+      "verification": "Needs Review",
+      "confidence": 50,
+      "source": "lemmy:lemmy.world",
+      "search_query": "GTA 6 competition",
+      "date_first_found": "2026-11-17T23:26:28Z",
+      "date_last_checked": "2026-11-17T23:26:28Z",
+      "date_last_seen": "2026-11-17T23:26:59Z",
+      "date_expired": null,
+      "summary": "The news of Grand Theft Auto 6's delay was quickly followed by a chorus of reassuring words about how [great it'll be when it finally releases](https://www.pcgamer.com/games/grand-theft-auto/take-two-",
+      "thumbnail": null,
+      "tags": [
+        "GTA 6",
+        "Giveaway",
+        "Lemmy"
+      ],
+      "status": "Needs Review",
+      "warnings": [
+        "No end date found"
+      ],
+      "trusted_source": false,
+      "moderation_notes": "",
+      "report_count": 0,
+      "duplicate_hash": "8c26213219a4e9d3",
+      "fetch_failures": 0
+    },
+    {
+      "id": "gv-84494640af",
+      "title": "With GTA 6 Coming, Take-Two CEO Says \"We're Terrified At All Times\" Of The Competition",
+      "platform": "Lemmy",
+      "url": "https://sh.itjust.works/post/8905679",
+      "creator": "nanoUFO",
+      "creator_url": "",
+      "prize": "",
+      "entry_method": [
+        "Follow",
+        "Comment",
+        "Like",
+        "Subscribe"
+      ],
+      "entry_types": [
+        "follow",
+        "comment",
+        "like",
+        "subscribe"
+      ],
+      "start_date": null,
+      "end_date": null,
+      "region_text": "",
+      "regions": [],
+      "verification": "Needs Review",
+      "confidence": 55,
+      "source": "lemmy:lemmy.world",
+      "search_query": "GTA 6 competition",
+      "date_first_found": "2026-11-17T23:26:29Z",
+      "date_last_checked": "2026-11-17T23:26:29Z",
+      "date_last_seen": "2026-11-17T23:26:59Z",
+      "date_expired": null,
+      "summary": "With GTA 6 Coming, Take-Two CEO Says \"We're Terrified At All Times\" Of The Competition - sh.itjust.works Jump to content sh.itjust.works menu Communities Create Post Create Community heart Support Lem",
+      "thumbnail": "https://sh.itjust.works/pictrs/image/796faf8e-7179-4dd7-84bc-d84f6fbd4e55.jpeg",
+      "tags": [
+        "GTA 6",
+        "Giveaway",
+        "Lemmy"
+      ],
+      "status": "Needs Review",
+      "warnings": [
+        "No end date found"
+      ],
+      "trusted_source": false,
+      "moderation_notes": "",
+      "report_count": 0,
+      "duplicate_hash": "9a7487494b8a1e5d",
+      "fetch_failures": 0
+    },
+    {
+      "id": "gv-2593c2a9b0",
+      "title": "With GTA 6 Coming, Take-Two CEO Says \"We're Terrified At All Times\" Of The Competition",
+      "platform": "Lemmy",
+      "url": "https://kbin.social/m/gaming/t/609663",
+      "creator": "mike591",
+      "creator_url": "",
+      "prize": "",
+      "entry_method": [],
+      "entry_types": [],
+      "start_date": null,
+      "end_date": null,
+      "region_text": "",
+      "regions": [],
+      "verification": "Needs Review",
+      "confidence": 45,
+      "source": "lemmy:lemmy.world",
+      "search_query": "GTA 6 competition",
+      "date_first_found": "2026-11-17T23:26:33Z",
+      "date_last_checked": "2026-11-17T23:26:33Z",
+      "date_last_seen": "2026-11-17T23:26:59Z",
+      "date_expired": null,
+      "summary": "\"We're looking over our shoulders at our competitors,\" Strauss Zelnick says.",
+      "thumbnail": null,
+      "tags": [
+        "GTA 6",
+        "Giveaway",
+        "Lemmy"
+      ],
+      "status": "Needs Review",
+      "warnings": [
+        "No end date found"
+      ],
+      "trusted_source": false,
+      "moderation_notes": "",
+      "report_count": 0,
+      "duplicate_hash": "d3d2c520b33e9458",
       "fetch_failures": 0
     }
   ]
