@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-11-17T23:27:58Z",
-  "count": 3,
+  "updated_at": "2026-11-17T23:41:04Z",
+  "count": 5,
   "repo": "welshman/gta6-giveaway-directory",
   "giveaways": [
     {
@@ -28,8 +28,8 @@
       "source": "curated",
       "search_query": null,
       "date_first_found": "2026-11-17T23:14:25Z",
-      "date_last_checked": "2026-11-17T23:27:58Z",
-      "date_last_seen": "2026-11-17T23:25:52Z",
+      "date_last_checked": "2026-11-17T23:41:04Z",
+      "date_last_seen": "2026-11-17T23:38:57Z",
       "date_expired": null,
       "summary": "Run by Kick. Watch 3 hours of streams to unlock a daily case. Ends 7 Dec 2026, or sooner if all codes are claimed.",
       "thumbnail": null,
@@ -75,8 +75,8 @@
       "source": "curated",
       "search_query": null,
       "date_first_found": "2026-11-17T23:14:25Z",
-      "date_last_checked": "2026-11-17T23:27:58Z",
-      "date_last_seen": "2026-11-17T23:25:52Z",
+      "date_last_checked": "2026-11-17T23:41:04Z",
+      "date_last_seen": "2026-11-17T23:38:57Z",
       "date_expired": null,
       "summary": "Fan site draw. Free to enter, one entry per person, independent of Rockstar.",
       "thumbnail": null,
@@ -126,8 +126,8 @@
       "source": "curated",
       "search_query": null,
       "date_first_found": "2026-11-17T23:25:52Z",
-      "date_last_checked": "2026-11-17T23:27:58Z",
-      "date_last_seen": "2026-11-17T23:25:52Z",
+      "date_last_checked": "2026-11-17T23:41:04Z",
+      "date_last_seen": "2026-11-17T23:38:57Z",
       "date_expired": null,
       "summary": "Retailer giveaway posted 16 Nov. The post shows no end date or rules, so read the rules on instant-gaming.com before entering.",
       "thumbnail": null,
@@ -145,6 +145,100 @@
       "moderation_notes": "Curated entry from config/curated.json",
       "report_count": 0,
       "duplicate_hash": "ea8fd3186972f9f8",
+      "fetch_failures": 0,
+      "curated": true
+    },
+    {
+      "id": "gv-5fd23a7d2d",
+      "title": "EDEKA – win a PS5, GTA 6 and a JBL headset",
+      "platform": "Website",
+      "url": "https://www.edeka.de/gewinnspiele/gta/",
+      "creator": "EDEKA",
+      "creator_url": "https://www.edeka.de",
+      "prize": "Main prize: PlayStation 5 Slim (digital), JBL Quantum 100P headset and GTA 6. Plus 4 JBL headsets",
+      "entry_method": [
+        "Answer the quiz question",
+        "Fill in the entry form"
+      ],
+      "entry_types": [
+        "form"
+      ],
+      "start_date": "2026-11-09T00:00:00Z",
+      "end_date": "2026-11-27T22:59:00Z",
+      "region_text": "Germany. Check the rules for age and residency",
+      "regions": [
+        "de"
+      ],
+      "verification": "Verified",
+      "confidence": 95,
+      "source": "curated",
+      "search_query": null,
+      "date_first_found": "2026-11-17T23:38:57Z",
+      "date_last_checked": "2026-11-17T23:41:04Z",
+      "date_last_seen": "2026-11-17T23:38:57Z",
+      "date_expired": null,
+      "summary": "Run by retailer EDEKA on its own website. Entry period 9 to 27 Nov 2026 (the page also shows 30 Nov as a closing date).",
+      "thumbnail": null,
+      "tags": [
+        "GTA 6",
+        "Giveaway",
+        "Website"
+      ],
+      "status": "Active",
+      "warnings": [
+        "Two closing dates shown (27 and 30 Nov). We use the earlier one",
+        "A third-party listing says a newsletter sign-up is required"
+      ],
+      "trusted_source": true,
+      "moderation_notes": "Curated entry from config/curated.json",
+      "report_count": 0,
+      "duplicate_hash": "7f4f3e9b221664cd",
+      "fetch_failures": 0,
+      "curated": true
+    },
+    {
+      "id": "gv-cb38b6701d",
+      "title": "EDEKA – 20 PlayStation 5 consoles and 20 copies of GTA 6",
+      "platform": "Website",
+      "url": "https://www.edeka.de/kampagnen/gewinnspiel-playstation5/",
+      "creator": "EDEKA",
+      "creator_url": "https://www.edeka.de",
+      "prize": "20 PlayStation 5 consoles and 20 GTA 6 games",
+      "entry_method": [
+        "Fill in the entry form"
+      ],
+      "entry_types": [
+        "form"
+      ],
+      "start_date": "2026-11-09T00:00:00Z",
+      "end_date": "2026-11-22T22:59:00Z",
+      "region_text": "Germany. Residents aged 18 and over",
+      "regions": [
+        "de"
+      ],
+      "verification": "Verified",
+      "confidence": 95,
+      "source": "curated",
+      "search_query": null,
+      "date_first_found": "2026-11-17T23:38:57Z",
+      "date_last_checked": "2026-11-17T23:41:04Z",
+      "date_last_seen": "2026-11-17T23:38:57Z",
+      "date_expired": null,
+      "summary": "Run by retailer EDEKA on its own website. Entry period 9 to 22 Nov 2026.",
+      "thumbnail": null,
+      "tags": [
+        "GTA 6",
+        "Giveaway",
+        "Website"
+      ],
+      "status": "Active",
+      "warnings": [
+        "Exact closing time not confirmed"
+      ],
+      "trusted_source": true,
+      "moderation_notes": "Curated entry from config/curated.json",
+      "report_count": 0,
+      "duplicate_hash": "bbb813368291ce0e",
       "fetch_failures": 0,
       "curated": true
     }
