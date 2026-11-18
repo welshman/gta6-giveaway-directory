@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-18T19:18:34Z",
+  "updated_at": "2026-11-18T23:49:51Z",
   "giveaways": [
     {
       "id": "gv-77dc9426f3",
@@ -64,7 +64,7 @@
       "search_query": "GTA 6 competition",
       "date_first_found": "2026-11-17T23:26:20Z",
       "date_last_checked": "2026-11-17T23:26:20Z",
-      "date_last_seen": "2026-11-17T23:39:57Z",
+      "date_last_seen": "2026-11-18T23:48:44Z",
       "date_expired": null,
       "summary": "",
       "thumbnail": null,
@@ -109,7 +109,7 @@
       "search_query": "GTA 6 competition",
       "date_first_found": "2026-11-17T23:26:28Z",
       "date_last_checked": "2026-11-17T23:26:28Z",
-      "date_last_seen": "2026-11-17T23:40:01Z",
+      "date_last_seen": "2026-11-18T23:48:48Z",
       "date_expired": null,
       "summary": "The news of Grand Theft Auto 6's delay was quickly followed by a chorus of reassuring words about how [great it'll be when it finally releases](https://www.pcgamer.com/games/grand-theft-auto/take-two-",
       "thumbnail": null,
@@ -158,7 +158,7 @@
       "search_query": "GTA 6 competition",
       "date_first_found": "2026-11-17T23:26:29Z",
       "date_last_checked": "2026-11-17T23:26:29Z",
-      "date_last_seen": "2026-11-17T23:40:01Z",
+      "date_last_seen": "2026-11-18T23:48:48Z",
       "date_expired": null,
       "summary": "With GTA 6 Coming, Take-Two CEO Says \"We're Terrified At All Times\" Of The Competition - sh.itjust.works Jump to content sh.itjust.works menu Communities Create Post Create Community heart Support Lem",
       "thumbnail": "https://sh.itjust.works/pictrs/image/796faf8e-7179-4dd7-84bc-d84f6fbd4e55.jpeg",
@@ -197,7 +197,7 @@
       "search_query": "GTA 6 competition",
       "date_first_found": "2026-11-17T23:26:33Z",
       "date_last_checked": "2026-11-17T23:26:33Z",
-      "date_last_seen": "2026-11-17T23:40:01Z",
+      "date_last_seen": "2026-11-18T23:48:48Z",
       "date_expired": null,
       "summary": "\"We're looking over our shoulders at our competitors,\" Strauss Zelnick says.",
       "thumbnail": null,
@@ -236,7 +236,7 @@
       "search_query": null,
       "date_first_found": "2026-11-18T19:18:33Z",
       "date_last_checked": "2026-11-18T19:18:33Z",
-      "date_last_seen": "2026-11-18T19:18:33Z",
+      "date_last_seen": "2026-11-18T23:49:50Z",
       "date_expired": null,
       "summary": "GTA 6 is out at midnight everywhere (19th November), but it's far from the only game in town. Indie publisher Devolver Digital is taking on the open-world behemoth with its very own Volvy's Adventure:",
       "thumbnail": null,
@@ -253,6 +253,52 @@
       "moderation_notes": "",
       "report_count": 0,
       "duplicate_hash": "02f0bcfb35e69408",
+      "fetch_failures": 0
+    },
+    {
+      "id": "gv-3eace0a68b",
+      "title": "Current list of free to enter via phone radio competitions",
+      "platform": "Forum",
+      "url": "https://forums.moneysavingexpert.com/discussion/6669288/current-list-of-free-to-enter-via-phone-radio-competitions",
+      "creator": "",
+      "creator_url": "",
+      "prize": "£900,000: Enter up to 250 times by calling 0372 376 7519 - Lines close 5pm 20/11",
+      "entry_method": [
+        "Form entry"
+      ],
+      "entry_types": [
+        "form"
+      ],
+      "start_date": null,
+      "end_date": "2026-11-19T17:00:00Z",
+      "region_text": "",
+      "regions": [
+        "international"
+      ],
+      "verification": "Needs Review",
+      "confidence": 50,
+      "source": "rss:MoneySavingExpert Competitions Time (all)",
+      "search_query": null,
+      "date_first_found": "2026-11-18T23:49:50Z",
+      "date_last_checked": "2026-11-18T23:49:50Z",
+      "date_last_seen": "2026-11-18T23:49:50Z",
+      "date_expired": null,
+      "summary": "Bauer: (Hits Radio, Magic, Absolute Radio, Kiss, Planet Rock: https://www2.hellorayo.co.uk)Make Me A Winner - Win £900,000: Enter up to 250 times by calling 0372 376 7519 - Lines close 5pm 20/11Make M",
+      "thumbnail": null,
+      "tags": [
+        "GTA 6",
+        "Giveaway",
+        "International",
+        "No purchase necessary",
+        "Ends Soon",
+        "Forum"
+      ],
+      "status": "Needs Review",
+      "warnings": [],
+      "trusted_source": false,
+      "moderation_notes": "",
+      "report_count": 0,
+      "duplicate_hash": "c4b7dfc844f0ae6e",
       "fetch_failures": 0
     }
   ]
