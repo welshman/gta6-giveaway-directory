@@ -1,0 +1,9 @@
+{
+  "providers": {
+    "kakao":  { "enabled": false, "api_key_env": "KAKAO_REST_API_KEY", "max_queries_per_run": 4, "note": "Daum Search, official Kakao Developers API. Free with quotas. Register an app at developers.kakao.com." },
+    "naver":  { "enabled": false, "client_id_env": "NAVER_CLIENT_ID", "client_secret_env": "NAVER_CLIENT_SECRET", "endpoints": ["webkr", "blog", "news", "cafearticle"], "max_queries_per_run": 3, "note": "Official Naver Search Open API, about 25,000 calls a day per app. Register at developers.naver.com." },
+    "kagi":   { "enabled": false, "api_key_env": "KAGI_API_TOKEN", "max_queries_per_run": 3, "note": "Pay as you go, about $12 per 1,000 searches. Experimental." },
+    "youcom": { "enabled": false, "api_key_env": "YDC_API_KEY", "max_queries_per_run": 3, "count": 20, "note": "You.com Search API. Needs a key from you.com/platform. Experimental." },
+    "yacy":   { "enabled": false, "base_url": "https://your-yacy-node.example", "max_queries_per_run": 4, "note": "Peer-to-peer search. Use your own node." }
+  }
+}
