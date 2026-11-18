@@ -1,0 +1,19 @@
+{
+  "providers": {
+    "rss": {
+      "feeds": [
+        { "name": "Reddit r/gtafriends", "url": "https://www.reddit.com/r/gtafriends/new/.rss" },
+        { "name": "GameRant", "url": "https://gamerant.com/feed/", "review_only": true },
+        { "name": "Insider Gaming", "url": "https://insider-gaming.com/feed/", "review_only": true },
+        { "name": "TheGamer", "url": "https://www.thegamer.com/feed/", "review_only": true },
+        { "name": "Metro Gaming", "url": "https://metro.co.uk/gaming/feed/", "review_only": true }
+      ]
+    },
+    "watch": {
+      "urls": [
+        { "url": "https://giveawaybandit.com/giveaways/", "follow_links": true }
+      ]
+    }
+  },
+  "allowed_domains": ["giveawaybandit.com"]
+}
