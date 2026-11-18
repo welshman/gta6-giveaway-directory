@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-11-17T23:41:04Z",
-  "count": 5,
+  "updated_at": "2026-11-18T00:12:33Z",
+  "count": 12,
   "repo": "welshman/gta6-giveaway-directory",
   "giveaways": [
     {
@@ -28,8 +28,8 @@
       "source": "curated",
       "search_query": null,
       "date_first_found": "2026-11-17T23:14:25Z",
-      "date_last_checked": "2026-11-17T23:41:04Z",
-      "date_last_seen": "2026-11-17T23:38:57Z",
+      "date_last_checked": "2026-11-18T00:12:33Z",
+      "date_last_seen": "2026-11-18T00:10:27Z",
       "date_expired": null,
       "summary": "Run by Kick. Watch 3 hours of streams to unlock a daily case. Ends 7 Dec 2026, or sooner if all codes are claimed.",
       "thumbnail": null,
@@ -75,8 +75,8 @@
       "source": "curated",
       "search_query": null,
       "date_first_found": "2026-11-17T23:14:25Z",
-      "date_last_checked": "2026-11-17T23:41:04Z",
-      "date_last_seen": "2026-11-17T23:38:57Z",
+      "date_last_checked": "2026-11-18T00:12:33Z",
+      "date_last_seen": "2026-11-18T00:10:27Z",
       "date_expired": null,
       "summary": "Fan site draw. Free to enter, one entry per person, independent of Rockstar.",
       "thumbnail": null,
@@ -126,8 +126,8 @@
       "source": "curated",
       "search_query": null,
       "date_first_found": "2026-11-17T23:25:52Z",
-      "date_last_checked": "2026-11-17T23:41:04Z",
-      "date_last_seen": "2026-11-17T23:38:57Z",
+      "date_last_checked": "2026-11-18T00:12:33Z",
+      "date_last_seen": "2026-11-18T00:10:27Z",
       "date_expired": null,
       "summary": "Retailer giveaway posted 16 Nov. The post shows no end date or rules, so read the rules on instant-gaming.com before entering.",
       "thumbnail": null,
@@ -174,8 +174,8 @@
       "source": "curated",
       "search_query": null,
       "date_first_found": "2026-11-17T23:38:57Z",
-      "date_last_checked": "2026-11-17T23:41:04Z",
-      "date_last_seen": "2026-11-17T23:38:57Z",
+      "date_last_checked": "2026-11-18T00:12:33Z",
+      "date_last_seen": "2026-11-18T00:10:27Z",
       "date_expired": null,
       "summary": "Run by retailer EDEKA on its own website. Entry period 9 to 27 Nov 2026 (the page also shows 30 Nov as a closing date).",
       "thumbnail": null,
@@ -221,8 +221,8 @@
       "source": "curated",
       "search_query": null,
       "date_first_found": "2026-11-17T23:38:57Z",
-      "date_last_checked": "2026-11-17T23:41:04Z",
-      "date_last_seen": "2026-11-17T23:38:57Z",
+      "date_last_checked": "2026-11-18T00:12:33Z",
+      "date_last_seen": "2026-11-18T00:10:27Z",
       "date_expired": null,
       "summary": "Run by retailer EDEKA on its own website. Entry period 9 to 22 Nov 2026.",
       "thumbnail": null,
@@ -239,6 +239,341 @@
       "moderation_notes": "Curated entry from config/curated.json",
       "report_count": 0,
       "duplicate_hash": "bbb813368291ce0e",
+      "fetch_failures": 0,
+      "curated": true
+    },
+    {
+      "id": "gv-7815b827af",
+      "title": "Gleam – win a PlayStation 5 Pro and GTA VI",
+      "platform": "Website",
+      "url": "https://gleam.io/giveaways/gB6Mc",
+      "creator": "Gleam.io",
+      "creator_url": "https://gleam.io",
+      "prize": "1 PlayStation 5 Pro bundled with Grand Theft Auto VI",
+      "entry_method": [
+        "Complete tasks on the Gleam page (follow Gleam on social media, referrals and more)",
+        "Daily entry"
+      ],
+      "entry_types": [
+        "form",
+        "follow"
+      ],
+      "start_date": null,
+      "end_date": "2026-11-30T12:59:00Z",
+      "region_text": "Worldwide",
+      "regions": [
+        "international"
+      ],
+      "verification": "Verified",
+      "confidence": 95,
+      "source": "curated",
+      "search_query": null,
+      "date_first_found": "2026-11-18T00:10:27Z",
+      "date_last_checked": "2026-11-18T00:12:33Z",
+      "date_last_seen": "2026-11-18T00:10:27Z",
+      "date_expired": null,
+      "summary": "Run by Gleam itself. One winner, picked at random and told by email.",
+      "thumbnail": null,
+      "tags": [
+        "GTA 6",
+        "Giveaway",
+        "Website",
+        "International"
+      ],
+      "status": "Active",
+      "warnings": [
+        "Tasks include following social accounts and an email entry"
+      ],
+      "trusted_source": true,
+      "moderation_notes": "Curated entry from config/curated.json",
+      "report_count": 0,
+      "duplicate_hash": "3bc67da86f0655a7",
+      "fetch_failures": 0,
+      "curated": true
+    },
+    {
+      "id": "gv-3cf501950c",
+      "title": "Lexar Gaming – win a PS5, GTA VI Ultimate Edition, 2TB SSD and more",
+      "platform": "Website",
+      "url": "https://gleam.io/SWWvN/lexar-gaming-gta-vi-playstation5-bundle-giveaway",
+      "creator": "Lexar Gaming",
+      "creator_url": "https://gleam.io/SWWvN/lexar-gaming-gta-vi-playstation5-bundle-giveaway",
+      "prize": "PS5 (digital), £70 PlayStation Store gift card, DualSense controller and charging station, PULSE Elite headset, GTA VI Ultimate Edition code and a 2TB Lexar NM790 SSD. Runner-up prizes too",
+      "entry_method": [
+        "Complete tasks on the Gleam page",
+        "Daily entry"
+      ],
+      "entry_types": [
+        "form"
+      ],
+      "start_date": null,
+      "end_date": "2026-12-06T23:59:00Z",
+      "region_text": "Not stated here. Check the Gleam page",
+      "regions": [],
+      "verification": "Likely",
+      "confidence": 95,
+      "source": "curated",
+      "search_query": null,
+      "date_first_found": "2026-11-18T00:10:27Z",
+      "date_last_checked": "2026-11-18T00:12:33Z",
+      "date_last_seen": "2026-11-18T00:10:27Z",
+      "date_expired": null,
+      "summary": "Found on the MoneySavingExpert competitions forum (UK) on 16 Nov. Daily entry.",
+      "thumbnail": null,
+      "tags": [
+        "GTA 6",
+        "Giveaway",
+        "Website"
+      ],
+      "status": "Active",
+      "warnings": [
+        "Exact closing time and eligible countries not confirmed"
+      ],
+      "trusted_source": false,
+      "moderation_notes": "Curated entry from config/curated.json",
+      "report_count": 0,
+      "duplicate_hash": "bd7a16fe29b3d2c2",
+      "fetch_failures": 0,
+      "curated": true
+    },
+    {
+      "id": "gv-fc4d7ef704",
+      "title": "IGN – win a GTA 6 vinyl soundtrack",
+      "platform": "Website",
+      "url": "https://www.ign.com/rewards/enter-to-win-a-gta-6-vinyl-soundtrack",
+      "creator": "IGN",
+      "creator_url": "https://www.ign.com",
+      "prize": "1 GTA 6 vinyl soundtrack (about $46.98)",
+      "entry_method": [
+        "Enter on the IGN page"
+      ],
+      "entry_types": [
+        "form"
+      ],
+      "start_date": "2026-11-17T18:00:00Z",
+      "end_date": "2026-12-08T18:00:00Z",
+      "region_text": "US only (50 states and D.C., excluding Hawaii and Alaska). 18+",
+      "regions": [
+        "us"
+      ],
+      "verification": "Verified",
+      "confidence": 95,
+      "source": "curated",
+      "search_query": null,
+      "date_first_found": "2026-11-18T00:10:27Z",
+      "date_last_checked": "2026-11-18T00:12:33Z",
+      "date_last_seen": "2026-11-18T00:10:27Z",
+      "date_expired": null,
+      "summary": "Run by IGN on its own site. This is a merchandise prize, not the game. No purchase necessary.",
+      "thumbnail": null,
+      "tags": [
+        "GTA 6",
+        "Giveaway",
+        "Website",
+        "No purchase necessary"
+      ],
+      "status": "Active",
+      "warnings": [
+        "Prize is the soundtrack, not the game"
+      ],
+      "trusted_source": true,
+      "moderation_notes": "Curated entry from config/curated.json",
+      "report_count": 0,
+      "duplicate_hash": "98f4c4f753cd07ef",
+      "fetch_failures": 0,
+      "curated": true
+    },
+    {
+      "id": "gv-e2471becee",
+      "title": "Medal – GTA 6 giveaway quest",
+      "platform": "Website",
+      "url": "https://medal.tv/features/gta6",
+      "creator": "Medal",
+      "creator_url": "https://medal.tv",
+      "prize": "A copy of Grand Theft Auto VI",
+      "entry_method": [
+        "Complete the GTA 6 Giveaway quest in the Medal app",
+        "Follow Medal on YouTube",
+        "Post any clip to your Medal profile"
+      ],
+      "entry_types": [
+        "follow",
+        "form"
+      ],
+      "start_date": "2026-11-04T21:00:00Z",
+      "end_date": "2026-11-19T04:59:00Z",
+      "region_text": "US, D.C. and Canada (excluding Quebec). 18+ or age of majority",
+      "regions": [
+        "us",
+        "ca"
+      ],
+      "verification": "Verified",
+      "confidence": 95,
+      "source": "curated",
+      "search_query": null,
+      "date_first_found": "2026-11-18T00:10:27Z",
+      "date_last_checked": "2026-11-18T00:12:33Z",
+      "date_last_seen": "2026-11-18T00:10:27Z",
+      "date_expired": null,
+      "summary": "Run by Medal on its own site. Ends 18 Nov at 11:59 pm ET. No purchase or payment necessary.",
+      "thumbnail": null,
+      "tags": [
+        "GTA 6",
+        "Giveaway",
+        "Website",
+        "No purchase necessary"
+      ],
+      "status": "Active",
+      "warnings": [
+        "Ends very soon"
+      ],
+      "trusted_source": true,
+      "moderation_notes": "Curated entry from config/curated.json",
+      "report_count": 0,
+      "duplicate_hash": "61e68f71763fb2ff",
+      "fetch_failures": 0,
+      "curated": true
+    },
+    {
+      "id": "gv-a5b0f23443",
+      "title": "Mogsy – win a PS5 Pro and GTA 6 (Gleam)",
+      "platform": "Website",
+      "url": "https://gleam.io/dydV3/ps5-pro-gta6-giveaway",
+      "creator": "Mogsy (Twitch streamer)",
+      "creator_url": "https://www.twitch.tv/Mogsy",
+      "prize": "1 PS5 Pro and a copy of GTA 6",
+      "entry_method": [
+        "Complete tasks on the Gleam page (follow Twitch, YouTube, Instagram, X, TikTok, join Discord)",
+        "Daily bonus actions",
+        "Refer friends for extra entries"
+      ],
+      "entry_types": [
+        "form",
+        "follow",
+        "join-discord"
+      ],
+      "start_date": "2026-11-09T08:00:00Z",
+      "end_date": "2026-12-12T07:59:00Z",
+      "region_text": "International",
+      "regions": [
+        "international"
+      ],
+      "verification": "Likely",
+      "confidence": 95,
+      "source": "curated",
+      "search_query": null,
+      "date_first_found": "2026-11-18T00:10:27Z",
+      "date_last_checked": "2026-11-18T00:12:33Z",
+      "date_last_seen": "2026-11-18T00:10:27Z",
+      "date_expired": null,
+      "summary": "Streamer giveaway on Gleam. No purchase necessary. One winner, emailed within 48 hours of the end.",
+      "thumbnail": null,
+      "tags": [
+        "GTA 6",
+        "Giveaway",
+        "Website",
+        "No purchase necessary",
+        "International"
+      ],
+      "status": "Active",
+      "warnings": [
+        "Closing time comes from a third-party listing. Check the Gleam page",
+        "Many tasks ask you to follow social accounts"
+      ],
+      "trusted_source": false,
+      "moderation_notes": "Curated entry from config/curated.json",
+      "report_count": 0,
+      "duplicate_hash": "de84b8f61b0534aa",
+      "fetch_failures": 0,
+      "curated": true
+    },
+    {
+      "id": "gv-97f6b2a25e",
+      "title": "NordVPN x IGN Poland – win a PS5 Slim and GTA VI",
+      "platform": "Website",
+      "url": "https://pl.ign.com/nordvpn/77822/nie-daj-sie-ograc-wymysl-riposte-i-wygraj-ps5-slim-gta-vi-dzieki-nordvpn",
+      "creator": "NordVPN / IGN Polska",
+      "creator_url": "https://pl.ign.com",
+      "prize": "1 PS5 Slim and GTA VI",
+      "entry_method": [
+        "Open the contest post on Facebook",
+        "Comment with the trap number and your funny comeback"
+      ],
+      "entry_types": [
+        "comment"
+      ],
+      "start_date": "2026-11-17T00:00:00Z",
+      "end_date": "2026-11-30T22:59:00Z",
+      "region_text": "Poland. Adult residents only",
+      "regions": [],
+      "verification": "Likely",
+      "confidence": 95,
+      "source": "curated",
+      "search_query": null,
+      "date_first_found": "2026-11-18T00:10:27Z",
+      "date_last_checked": "2026-11-18T00:12:33Z",
+      "date_last_seen": "2026-11-18T00:10:27Z",
+      "date_expired": null,
+      "summary": "Creative contest. Entries until 30 Nov 23:59 Polish time. Results on 3 Dec.",
+      "thumbnail": null,
+      "tags": [
+        "GTA 6",
+        "Giveaway",
+        "Website"
+      ],
+      "status": "Active",
+      "warnings": [
+        "Entry is by commenting on Facebook"
+      ],
+      "trusted_source": false,
+      "moderation_notes": "Curated entry from config/curated.json",
+      "report_count": 0,
+      "duplicate_hash": "9b1becd1528129df",
+      "fetch_failures": 0,
+      "curated": true
+    },
+    {
+      "id": "gv-109c34c0ff",
+      "title": "Zegarownia.pl – win a boxed GTA VI (3 winners) or a 200 zl voucher",
+      "platform": "Website",
+      "url": "https://zegarownia.pl/wiadomosci/konkurs-zegarek-grand-theft-auto-vi",
+      "creator": "Zegarownia.pl",
+      "creator_url": "https://zegarownia.pl",
+      "prize": "3 boxed GTA VI copies (PS5 or Xbox Series X) and 10 vouchers worth 200 zl",
+      "entry_method": [
+        "Answer the contest question in a comment under the contest post"
+      ],
+      "entry_types": [
+        "comment"
+      ],
+      "start_date": "2026-11-17T00:00:00Z",
+      "end_date": "2026-11-23T22:59:00Z",
+      "region_text": "Poland. Check the rules",
+      "regions": [],
+      "verification": "Likely",
+      "confidence": 95,
+      "source": "curated",
+      "search_query": null,
+      "date_first_found": "2026-11-18T00:10:27Z",
+      "date_last_checked": "2026-11-18T00:12:33Z",
+      "date_last_seen": "2026-11-18T00:10:27Z",
+      "date_expired": null,
+      "summary": "Watch-shop contest. Question: which watch would you buy in GTA, and why? Ends 23 Nov, 23:59.",
+      "thumbnail": null,
+      "tags": [
+        "GTA 6",
+        "Giveaway",
+        "Website",
+        "No purchase necessary"
+      ],
+      "status": "Active",
+      "warnings": [
+        "Voucher needs a minimum 600 zl purchase"
+      ],
+      "trusted_source": false,
+      "moderation_notes": "Curated entry from config/curated.json",
+      "report_count": 0,
+      "duplicate_hash": "e3849a47cac57f84",
       "fetch_failures": 0,
       "curated": true
     }
