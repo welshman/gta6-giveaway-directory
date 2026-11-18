@@ -1,8 +1,14 @@
 name: Scan giveaways
 
+# GitHub's scheduled runs are best effort: they can start late or be skipped when GitHub is busy.
+# To get close to hourly, there are two schedules an hour apart-ish (minute 17 and minute 47).
+# The "gate" step skips a scheduled run if the last scan was under 30 minutes ago, so you never get double scans.
 on:
   schedule:
-    - cron: "7 * * * *"        # every hour at minute 7 (UTC). Edit to change the schedule.
+    - cron: "17 * * * *"
+    - cron: "47 * * * *"
+  repository_dispatch:
+    types: [scan]          # lets an outside timer (for example cron-job.org) trigger a scan
   workflow_dispatch:
     inputs:
       dry_run:
@@ -24,12 +30,33 @@ jobs:
     timeout-minutes: 30
     steps:
       - uses: actions/checkout@v4
+      - name: Gate (skip if scanned recently)
+        id: gate
+        env:
+          EVENT: ${{ github.event_name }}
+        run: |
+          python3 - <<'PY' >> "$GITHUB_OUTPUT"
+          import json, datetime, os
+          run = "true"
+          if os.environ.get("EVENT") == "schedule":
+              try:
+                  t = json.load(open("data/status.json"))["updated_at"]
+                  age = (datetime.datetime.now(datetime.timezone.utc) - datetime.datetime.fromisoformat(t.replace("Z", "+00:00"))).total_seconds()
+                  if age < 1800:
+                      run = "false"
+              except Exception:
+                  pass
+          print("run=" + run)
+          PY
       - uses: actions/setup-python@v5
+        if: steps.gate.outputs.run == 'true'
         with:
           python-version: "3.12"
           cache: pip
       - run: pip install -r requirements.txt
+        if: steps.gate.outputs.run == 'true'
       - name: Run scanner
+        if: steps.gate.outputs.run == 'true'
         run: python scripts/scan.py ${{ inputs.dry_run && '--dry-run' || '' }}
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -56,7 +83,7 @@ jobs:
           X_BEARER_TOKEN: ${{ secrets.X_BEARER_TOKEN }}
           DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
       - name: Commit changes
-        if: ${{ !inputs.dry_run }}
+        if: ${{ steps.gate.outputs.run == 'true' && !inputs.dry_run }}
         run: |
           git config user.name "giveaway-bot"
           git config user.email "giveaway-bot@users.noreply.github.com"
