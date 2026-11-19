@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-19T10:24:14Z",
+  "updated_at": "2026-11-19T18:46:48Z",
   "giveaways": [
     {
       "id": "gv-77dc9426f3",
@@ -64,7 +64,7 @@
       "search_query": "GTA 6 competition",
       "date_first_found": "2026-11-17T23:26:20Z",
       "date_last_checked": "2026-11-17T23:26:20Z",
-      "date_last_seen": "2026-11-19T03:38:32Z",
+      "date_last_seen": "2026-11-19T18:45:41Z",
       "date_expired": null,
       "summary": "",
       "thumbnail": null,
@@ -109,7 +109,7 @@
       "search_query": "GTA 6 competition",
       "date_first_found": "2026-11-17T23:26:28Z",
       "date_last_checked": "2026-11-17T23:26:28Z",
-      "date_last_seen": "2026-11-19T03:38:36Z",
+      "date_last_seen": "2026-11-19T18:45:45Z",
       "date_expired": null,
       "summary": "The news of Grand Theft Auto 6's delay was quickly followed by a chorus of reassuring words about how [great it'll be when it finally releases](https://www.pcgamer.com/games/grand-theft-auto/take-two-",
       "thumbnail": null,
@@ -158,7 +158,7 @@
       "search_query": "GTA 6 competition",
       "date_first_found": "2026-11-17T23:26:29Z",
       "date_last_checked": "2026-11-17T23:26:29Z",
-      "date_last_seen": "2026-11-19T03:38:36Z",
+      "date_last_seen": "2026-11-19T18:45:45Z",
       "date_expired": null,
       "summary": "With GTA 6 Coming, Take-Two CEO Says \"We're Terrified At All Times\" Of The Competition - sh.itjust.works Jump to content sh.itjust.works menu Communities Create Post Create Community heart Support Lem",
       "thumbnail": "https://sh.itjust.works/pictrs/image/796faf8e-7179-4dd7-84bc-d84f6fbd4e55.jpeg",
@@ -197,7 +197,7 @@
       "search_query": "GTA 6 competition",
       "date_first_found": "2026-11-17T23:26:33Z",
       "date_last_checked": "2026-11-17T23:26:33Z",
-      "date_last_seen": "2026-11-19T03:38:36Z",
+      "date_last_seen": "2026-11-19T18:45:45Z",
       "date_expired": null,
       "summary": "\"We're looking over our shoulders at our competitors,\" Strauss Zelnick says.",
       "thumbnail": null,
@@ -236,7 +236,7 @@
       "search_query": null,
       "date_first_found": "2026-11-18T19:18:33Z",
       "date_last_checked": "2026-11-18T19:18:33Z",
-      "date_last_seen": "2026-11-19T10:24:13Z",
+      "date_last_seen": "2026-11-19T18:46:47Z",
       "date_expired": null,
       "summary": "GTA 6 is out at midnight everywhere (19th November), but it's far from the only game in town. Indie publisher Devolver Digital is taking on the open-world behemoth with its very own Volvy's Adventure:",
       "thumbnail": null,
@@ -256,49 +256,95 @@
       "fetch_failures": 0
     },
     {
-      "id": "gv-3eace0a68b",
-      "title": "Current list of free to enter via phone radio competitions",
+      "id": "gv-4cef225cbc",
+      "title": "E: 27/11 Win a PlayStation 5 Pro, a copy of GTA VI and an absolutely stacked haul of Muc-Off gear",
       "platform": "Forum",
-      "url": "https://forums.moneysavingexpert.com/discussion/6669288/current-list-of-free-to-enter-via-phone-radio-competitions",
+      "url": "https://forums.moneysavingexpert.com/discussion/6691342/e-27-11-win-a-playstation-5-pro-a-copy-of-gta-vi-and-an-absolutely-stacked-haul-of-muc-off-gear",
       "creator": "",
       "creator_url": "",
-      "prize": "£900,000: Enter up to 250 times by calling 0372 376 7519 - Lines close 5pm 20/11",
+      "prize": "PlayStation 5 Pro, a copy of GTA VI and an absolutely stacked haul of Muc-Off ge",
       "entry_method": [
-        "Form entry"
+        "Comment"
       ],
       "entry_types": [
-        "form"
+        "comment"
       ],
       "start_date": null,
-      "end_date": "2026-11-19T17:00:00Z",
+      "end_date": null,
       "region_text": "",
-      "regions": [
-        "international"
-      ],
+      "regions": [],
       "verification": "Needs Review",
-      "confidence": 50,
-      "source": "rss:MoneySavingExpert Competitions Time (all)",
+      "confidence": 55,
+      "source": "rss:MoneySavingExpert Competitions Time (standard)",
       "search_query": null,
-      "date_first_found": "2026-11-18T23:49:50Z",
-      "date_last_checked": "2026-11-18T23:49:50Z",
-      "date_last_seen": "2026-11-19T03:39:37Z",
+      "date_first_found": "2026-11-19T18:46:38Z",
+      "date_last_checked": "2026-11-19T18:46:38Z",
+      "date_last_seen": "2026-11-19T18:46:47Z",
       "date_expired": null,
-      "summary": "Bauer: (Hits Radio, Magic, Absolute Radio, Kiss, Planet Rock: https://www2.hellorayo.co.uk)Make Me A Winner - Win £900,000: Enter up to 250 times by calling 0372 376 7519 - Lines close 5pm 20/11Make M",
+      "summary": "https://muc-off.com/pages/vicecityiscalling https://muc-off.com/pages/vicecityiscalling E: 27/11 Win a PlayStation 5 Pro, a copy of GTA VI and an absolutely stacked haul of Muc-Off gear — MoneySavingE",
+      "thumbnail": "https://forums.moneysavingexpert.com/media/secure/image/B2VH8ZTE6KCV/image.png",
+      "tags": [
+        "GTA 6",
+        "Giveaway",
+        "Forum"
+      ],
+      "status": "Needs Review",
+      "warnings": [
+        "No end date found"
+      ],
+      "trusted_source": false,
+      "moderation_notes": "",
+      "report_count": 0,
+      "duplicate_hash": "d2960dba79e84293",
+      "fetch_failures": 0
+    },
+    {
+      "id": "gv-d053553cca",
+      "title": "E: 17/12 Win a copy of GTA VI, a digital PS5 console + Stealth gaming accessories (IG)",
+      "platform": "Forum",
+      "url": "https://forums.moneysavingexpert.com/discussion/6691300/e-17-12-win-a-copy-of-gta-vi-a-digital-ps5-console-stealth-gaming-accessories-ig",
+      "creator": "",
+      "creator_url": "",
+      "prize": "copy of GTA VI, a digital PS5 console + Stealth gaming accessories (IG)",
+      "entry_method": [
+        "Follow",
+        "Comment",
+        "Link in bio",
+        "Tag friends"
+      ],
+      "entry_types": [
+        "follow",
+        "comment",
+        "link-in-bio",
+        "tag-friends"
+      ],
+      "start_date": null,
+      "end_date": null,
+      "region_text": "",
+      "regions": [],
+      "verification": "Needs Review",
+      "confidence": 55,
+      "source": "rss:MoneySavingExpert Competitions Time (standard)",
+      "search_query": null,
+      "date_first_found": "2026-11-19T18:46:47Z",
+      "date_last_checked": "2026-11-19T18:46:47Z",
+      "date_last_seen": "2026-11-19T18:46:47Z",
+      "date_expired": null,
+      "summary": "https://www.instagram.com/p/Df68XtwivWr/(I can only see an Instagram entry route at the moment, even though T&amp;Cs also mention Facebook and Tiktok)https://www.stealthgaming.net/ https://www.instagr",
       "thumbnail": null,
       "tags": [
         "GTA 6",
         "Giveaway",
-        "International",
-        "No purchase necessary",
-        "Ends Soon",
         "Forum"
       ],
       "status": "Needs Review",
-      "warnings": [],
+      "warnings": [
+        "No end date found"
+      ],
       "trusted_source": false,
       "moderation_notes": "",
       "report_count": 0,
-      "duplicate_hash": "c4b7dfc844f0ae6e",
+      "duplicate_hash": "fb0f7d57aa9b2115",
       "fetch_failures": 0
     }
   ]
