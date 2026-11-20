@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-20T09:18:19Z",
+  "updated_at": "2026-11-20T10:05:44Z",
   "giveaways": [
     {
       "id": "gv-ae72ae3589",
@@ -31,7 +31,7 @@
       "search_query": null,
       "date_first_found": "2026-11-18T04:13:15Z",
       "date_last_checked": "2026-11-19T01:37:28Z",
-      "date_last_seen": "2026-11-20T09:16:16Z",
+      "date_last_seen": "2026-11-20T10:03:40Z",
       "date_expired": "2026-11-19T01:37:28Z",
       "summary": "Posted 14 Nov, ends 18 Nov. The post says it is not sponsored by Rockstar or Take-Two.",
       "thumbnail": null,
@@ -83,7 +83,7 @@
       "search_query": null,
       "date_first_found": "2026-11-18T04:13:15Z",
       "date_last_checked": "2026-11-19T01:37:28Z",
-      "date_last_seen": "2026-11-20T09:16:16Z",
+      "date_last_seen": "2026-11-20T10:03:40Z",
       "date_expired": "2026-11-19T01:37:28Z",
       "summary": "Posted 14 Nov, winners picked 18 Nov. The post mentions a PC copy, but GTA 6 is only on PS5 and Xbox.",
       "thumbnail": null,
@@ -136,7 +136,7 @@
       "search_query": null,
       "date_first_found": "2026-11-18T04:13:15Z",
       "date_last_checked": "2026-11-19T01:37:28Z",
-      "date_last_seen": "2026-11-20T09:16:16Z",
+      "date_last_seen": "2026-11-20T10:03:40Z",
       "date_expired": "2026-11-19T01:37:28Z",
       "summary": "Posted 15 Nov, winner announced 18 Nov.",
       "thumbnail": null,
@@ -154,6 +154,57 @@
       "moderation_notes": "Curated entry from config/curated.json [auto] end date passed",
       "report_count": 0,
       "duplicate_hash": "c49f3bcaba59b805",
+      "fetch_failures": 0,
+      "curated": true
+    },
+    {
+      "id": "gv-e2471becee",
+      "title": "Medal – GTA 6 giveaway quest",
+      "platform": "Website",
+      "url": "https://medal.tv/features/gta6",
+      "creator": "Medal",
+      "creator_url": "https://medal.tv",
+      "prize": "A copy of Grand Theft Auto VI",
+      "entry_method": [
+        "Complete the GTA 6 Giveaway quest in the Medal app",
+        "Follow Medal on YouTube",
+        "Post any clip to your Medal profile"
+      ],
+      "entry_types": [
+        "follow",
+        "form"
+      ],
+      "start_date": "2026-11-04T21:00:00Z",
+      "end_date": "2026-11-19T04:59:00Z",
+      "region_text": "US, D.C. and Canada (excluding Quebec). 18+ or age of majority",
+      "regions": [
+        "us",
+        "ca"
+      ],
+      "verification": "Expired",
+      "confidence": 95,
+      "source": "curated",
+      "search_query": null,
+      "date_first_found": "2026-11-18T00:10:27Z",
+      "date_last_checked": "2026-11-19T09:36:11Z",
+      "date_last_seen": "2026-11-20T10:03:40Z",
+      "date_expired": "2026-11-19T09:36:11Z",
+      "summary": "Run by Medal on its own site. Ends 18 Nov at 11:59 pm ET. No purchase or payment necessary.",
+      "thumbnail": null,
+      "tags": [
+        "GTA 6",
+        "Giveaway",
+        "Website",
+        "No purchase necessary"
+      ],
+      "status": "Expired",
+      "warnings": [
+        "Ends very soon"
+      ],
+      "trusted_source": true,
+      "moderation_notes": "Curated entry from config/curated.json [auto] end date passed",
+      "report_count": 0,
+      "duplicate_hash": "61e68f71763fb2ff",
       "fetch_failures": 0,
       "curated": true
     }
