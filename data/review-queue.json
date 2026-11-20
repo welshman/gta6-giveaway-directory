@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-20T01:52:28Z",
+  "updated_at": "2026-11-20T09:18:19Z",
   "giveaways": [
     {
       "id": "gv-77dc9426f3",
@@ -25,7 +25,7 @@
       "search_query": null,
       "date_first_found": "2026-11-17T23:16:30Z",
       "date_last_checked": "2026-11-17T23:16:30Z",
-      "date_last_seen": "2026-11-20T01:52:27Z",
+      "date_last_seen": "2026-11-20T09:18:18Z",
       "date_expired": null,
       "summary": "Hello! This piece is part of our GTA Week coverage here on Eurogamer, as we explore all things Grand Theft Auto across the launch period of the wildly anticipated Grand Theft Auto 6. For more like thi",
       "thumbnail": null,
@@ -236,7 +236,7 @@
       "search_query": null,
       "date_first_found": "2026-11-18T19:18:33Z",
       "date_last_checked": "2026-11-18T19:18:33Z",
-      "date_last_seen": "2026-11-20T01:52:27Z",
+      "date_last_seen": "2026-11-20T09:18:18Z",
       "date_expired": null,
       "summary": "GTA 6 is out at midnight everywhere (19th November), but it's far from the only game in town. Indie publisher Devolver Digital is taking on the open-world behemoth with its very own Volvy's Adventure:",
       "thumbnail": null,
@@ -345,6 +345,49 @@
       "moderation_notes": "",
       "report_count": 0,
       "duplicate_hash": "fb0f7d57aa9b2115",
+      "fetch_failures": 0
+    },
+    {
+      "id": "gv-d186283bbc",
+      "title": "E: 25/11 Win 1 of 5 PlayStation 5 Slim Digital Consoles (Kick & Reddit)",
+      "platform": "Forum",
+      "url": "https://forums.moneysavingexpert.com/discussion/6691397/e-25-11-win-1-of-5-playstation-5-slim-digital-consoles-kick-reddit",
+      "creator": "",
+      "creator_url": "",
+      "prize": "of 5 PlayStation 5 Slim Digital Consoles (Kick & Reddit)",
+      "entry_method": [
+        "Comment"
+      ],
+      "entry_types": [
+        "comment"
+      ],
+      "start_date": null,
+      "end_date": null,
+      "region_text": "",
+      "regions": [],
+      "verification": "Needs Review",
+      "confidence": 40,
+      "source": "rss:MoneySavingExpert Competitions Time (standard)",
+      "search_query": null,
+      "date_first_found": "2026-11-20T09:17:19Z",
+      "date_last_checked": "2026-11-20T09:17:19Z",
+      "date_last_seen": "2026-11-20T09:17:39Z",
+      "date_expired": null,
+      "summary": "viewer bounty: clip a KICK streamer hitting a 3 star or more wanted rating on GTA 6 : r/KickStreaming (reddit.com) https://www.reddit.com/r/KickStreaming/comments/1y0o1ls/viewer_bounty_clip_a_kick_str",
+      "thumbnail": "https://us-noi.v-cdn.net/6031891/uploads/W2CNDKTGCB3I/forum-homepage-icon-thumbnail.png",
+      "tags": [
+        "GTA 6",
+        "Giveaway",
+        "Forum"
+      ],
+      "status": "Needs Review",
+      "warnings": [
+        "No end date found"
+      ],
+      "trusted_source": false,
+      "moderation_notes": "",
+      "report_count": 0,
+      "duplicate_hash": "e633361d28b48204",
       "fetch_failures": 0
     }
   ]
