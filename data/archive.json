@@ -1,4 +1,161 @@
 {
-  "updated_at": "2026-11-20T01:01:35Z",
-  "giveaways": []
+  "updated_at": "2026-11-20T01:52:28Z",
+  "giveaways": [
+    {
+      "id": "gv-ae72ae3589",
+      "title": "Thrill.com – rob a truck to win GTA VI (6 Ultimate Editions)",
+      "platform": "X",
+      "url": "https://x.com/Thrill_com/status/2121550888846156059",
+      "creator": "Thrill.com (@Thrill_com)",
+      "creator_url": "https://x.com/Thrill_com",
+      "prize": "6 GTA VI Ultimate Edition codes (PS5 or Xbox)",
+      "entry_method": [
+        "Like the post",
+        "Repost (retweet) the post",
+        "Follow @Thrill_com",
+        "Reply with a truck number and name plus your Thrill username"
+      ],
+      "entry_types": [
+        "like",
+        "repost",
+        "follow",
+        "comment"
+      ],
+      "start_date": "2026-11-14T00:00:00Z",
+      "end_date": "2026-11-18T23:59:00Z",
+      "region_text": "",
+      "regions": [],
+      "verification": "Expired",
+      "confidence": 95,
+      "source": "curated",
+      "search_query": null,
+      "date_first_found": "2026-11-18T04:13:15Z",
+      "date_last_checked": "2026-11-19T01:37:28Z",
+      "date_last_seen": "2026-11-20T01:50:23Z",
+      "date_expired": "2026-11-19T01:37:28Z",
+      "summary": "Posted 14 Nov, ends 18 Nov. The post says it is not sponsored by Rockstar or Take-Two.",
+      "thumbnail": null,
+      "tags": [
+        "GTA 6",
+        "Giveaway",
+        "X"
+      ],
+      "status": "Expired",
+      "warnings": [
+        "Exact end time not shown"
+      ],
+      "trusted_source": false,
+      "moderation_notes": "Curated entry from config/curated.json [auto] end date passed",
+      "report_count": 0,
+      "duplicate_hash": "042748c8bc0ccdbd",
+      "fetch_failures": 0,
+      "curated": true
+    },
+    {
+      "id": "gv-79b33d69fc",
+      "title": "SteamGamesPC – 2 GTA 6 Ultimate Edition copies (X and Twitch)",
+      "platform": "X",
+      "url": "https://x.com/SteamGamesPC/status/2121726898422378770",
+      "creator": "SteamGamesPC (@SteamGamesPC) / Ramez05",
+      "creator_url": "https://x.com/SteamGamesPC",
+      "prize": "2 GTA 6 Ultimate Edition codes (PS5, Xbox or PC when it releases)",
+      "entry_method": [
+        "Follow @Ramez05 on X and Twitch with notifications on",
+        "Like and repost",
+        "Comment your platform (PS5, Xbox or PC)",
+        "Tag a friend",
+        "Join the Discord for the Twitch draw"
+      ],
+      "entry_types": [
+        "follow",
+        "like",
+        "repost",
+        "comment",
+        "join-discord"
+      ],
+      "start_date": "2026-11-14T00:00:00Z",
+      "end_date": "2026-11-18T23:59:00Z",
+      "region_text": "",
+      "regions": [],
+      "verification": "Expired",
+      "confidence": 95,
+      "source": "curated",
+      "search_query": null,
+      "date_first_found": "2026-11-18T04:13:15Z",
+      "date_last_checked": "2026-11-19T01:37:28Z",
+      "date_last_seen": "2026-11-20T01:50:23Z",
+      "date_expired": "2026-11-19T01:37:28Z",
+      "summary": "Posted 14 Nov, winners picked 18 Nov. The post mentions a PC copy, but GTA 6 is only on PS5 and Xbox.",
+      "thumbnail": null,
+      "tags": [
+        "GTA 6",
+        "Giveaway",
+        "X"
+      ],
+      "status": "Expired",
+      "warnings": [
+        "No organiser details beyond the X account",
+        "Mentions a PC prize although GTA 6 is not on PC",
+        "Check the post and Discord before entering"
+      ],
+      "trusted_source": false,
+      "moderation_notes": "Curated entry from config/curated.json [auto] end date passed",
+      "report_count": 0,
+      "duplicate_hash": "076cf4a08a5ce25f",
+      "fetch_failures": 0,
+      "curated": true
+    },
+    {
+      "id": "gv-bf055c1207",
+      "title": "jdn – win a GTA 6 copy (PS5 or Xbox)",
+      "platform": "X",
+      "url": "https://x.com/jdncrtr/status/2122101407591674128",
+      "creator": "jdn (@jdncrtr)",
+      "creator_url": "https://x.com/jdncrtr",
+      "prize": "1 GTA 6 copy (PS5 or Xbox)",
+      "entry_method": [
+        "Follow @jdncrtr and @gashachain",
+        "Like and repost",
+        "Comment PS5 or Xbox"
+      ],
+      "entry_types": [
+        "follow",
+        "like",
+        "repost",
+        "comment"
+      ],
+      "start_date": "2026-11-15T00:00:00Z",
+      "end_date": "2026-11-18T23:59:00Z",
+      "region_text": "Worldwide",
+      "regions": [
+        "international"
+      ],
+      "verification": "Expired",
+      "confidence": 95,
+      "source": "curated",
+      "search_query": null,
+      "date_first_found": "2026-11-18T04:13:15Z",
+      "date_last_checked": "2026-11-19T01:37:28Z",
+      "date_last_seen": "2026-11-20T01:50:23Z",
+      "date_expired": "2026-11-19T01:37:28Z",
+      "summary": "Posted 15 Nov, winner announced 18 Nov.",
+      "thumbnail": null,
+      "tags": [
+        "GTA 6",
+        "Giveaway",
+        "X",
+        "International"
+      ],
+      "status": "Expired",
+      "warnings": [
+        "No organiser details beyond the X account"
+      ],
+      "trusted_source": false,
+      "moderation_notes": "Curated entry from config/curated.json [auto] end date passed",
+      "report_count": 0,
+      "duplicate_hash": "c49f3bcaba59b805",
+      "fetch_failures": 0,
+      "curated": true
+    }
+  ]
 }
