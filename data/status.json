@@ -1,46 +1,46 @@
 {
-  "updated_at": "2026-11-21T00:22:06Z",
+  "updated_at": "2026-11-21T07:48:33Z",
   "providers": {
     "brave": {
-      "last_run": "2026-11-21T00:15:57Z",
+      "last_run": "2026-11-21T07:42:32Z",
       "ok": false,
       "results": 0,
       "skipped": true,
       "error": "missing secret BRAVE_API_KEY"
     },
     "youtube": {
-      "last_run": "2026-11-21T00:15:57Z",
+      "last_run": "2026-11-21T07:42:32Z",
       "ok": false,
       "results": 0,
       "skipped": true,
       "error": "missing secret YOUTUBE_API_KEY"
     },
     "twitch": {
-      "last_run": "2026-11-21T00:15:57Z",
+      "last_run": "2026-11-21T07:42:32Z",
       "ok": false,
       "results": 0,
       "skipped": true,
       "error": "missing secret TWITCH_CLIENT_ID"
     },
     "rss": {
-      "last_run": "2026-11-21T00:16:02Z",
+      "last_run": "2026-11-21T07:42:37Z",
       "ok": true,
-      "results": 2107
+      "results": 2235
     },
     "watch": {
-      "last_run": "2026-11-21T00:17:37Z",
+      "last_run": "2026-11-21T07:44:12Z",
       "ok": true,
-      "results": 163
+      "results": 171
     },
     "curated": {
-      "last_run": "2026-11-21T00:15:57Z",
+      "last_run": "2026-11-21T07:42:32Z",
       "ok": true,
       "results": 21
     },
     "lemmy": {
-      "last_run": "2026-11-21T00:15:57Z",
+      "last_run": "2026-11-21T07:42:32Z",
       "ok": true,
-      "results": 13
+      "results": 33
     }
   }
 }

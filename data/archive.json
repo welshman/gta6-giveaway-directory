@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-21T00:22:06Z",
+  "updated_at": "2026-11-21T07:48:33Z",
   "giveaways": [
     {
       "id": "gv-ae72ae3589",
@@ -31,7 +31,7 @@
       "search_query": null,
       "date_first_found": "2026-11-18T04:13:15Z",
       "date_last_checked": "2026-11-19T01:37:28Z",
-      "date_last_seen": "2026-11-21T00:20:00Z",
+      "date_last_seen": "2026-11-21T07:46:21Z",
       "date_expired": "2026-11-19T01:37:28Z",
       "summary": "Posted 14 Nov, ends 18 Nov. The post says it is not sponsored by Rockstar or Take-Two.",
       "thumbnail": null,
@@ -83,7 +83,7 @@
       "search_query": null,
       "date_first_found": "2026-11-18T04:13:15Z",
       "date_last_checked": "2026-11-19T01:37:28Z",
-      "date_last_seen": "2026-11-21T00:20:00Z",
+      "date_last_seen": "2026-11-21T07:46:21Z",
       "date_expired": "2026-11-19T01:37:28Z",
       "summary": "Posted 14 Nov, winners picked 18 Nov. The post mentions a PC copy, but GTA 6 is only on PS5 and Xbox.",
       "thumbnail": null,
@@ -136,7 +136,7 @@
       "search_query": null,
       "date_first_found": "2026-11-18T04:13:15Z",
       "date_last_checked": "2026-11-19T01:37:28Z",
-      "date_last_seen": "2026-11-21T00:20:00Z",
+      "date_last_seen": "2026-11-21T07:46:21Z",
       "date_expired": "2026-11-19T01:37:28Z",
       "summary": "Posted 15 Nov, winner announced 18 Nov.",
       "thumbnail": null,
@@ -187,7 +187,7 @@
       "search_query": null,
       "date_first_found": "2026-11-18T00:10:27Z",
       "date_last_checked": "2026-11-19T09:36:11Z",
-      "date_last_seen": "2026-11-21T00:20:00Z",
+      "date_last_seen": "2026-11-21T07:46:21Z",
       "date_expired": "2026-11-19T09:36:11Z",
       "summary": "Run by Medal on its own site. Ends 18 Nov at 11:59 pm ET. No purchase or payment necessary.",
       "thumbnail": null,
@@ -234,7 +234,7 @@
       "search_query": null,
       "date_first_found": "2026-11-17T23:14:25Z",
       "date_last_checked": "2026-11-19T18:46:48Z",
-      "date_last_seen": "2026-11-21T00:20:00Z",
+      "date_last_seen": "2026-11-21T07:46:21Z",
       "date_expired": "2026-11-19T18:46:48Z",
       "summary": "Fan site draw. Free to enter, one entry per person, independent of Rockstar.",
       "thumbnail": null,
@@ -252,6 +252,149 @@
       "moderation_notes": "Curated entry from config/curated.json [auto] end date passed",
       "report_count": 0,
       "duplicate_hash": "9b3952a10f5bf54e",
+      "fetch_failures": 0,
+      "curated": true
+    },
+    {
+      "id": "gv-bcaefd3d10",
+      "title": "Radio ESKA (Poland) – win GTA VI on Thursday 19 November",
+      "platform": "Website",
+      "url": "https://hitweekend.eska.pl/",
+      "creator": "Radio ESKA",
+      "creator_url": "https://hitweekend.eska.pl/",
+      "prize": "9 to 10 copies of GTA VI (boxed, PS5 or Xbox Series X). The page shows both numbers",
+      "entry_method": [
+        "Listen to Radio ESKA on 19 November",
+        "Sign up on the page when asked"
+      ],
+      "entry_types": [
+        "watch-stream",
+        "form"
+      ],
+      "start_date": "2026-11-19T00:00:00Z",
+      "end_date": "2026-11-19T22:59:00Z",
+      "region_text": "Poland. Check the rules",
+      "regions": [],
+      "verification": "Expired",
+      "confidence": 95,
+      "source": "curated",
+      "search_query": null,
+      "date_first_found": "2026-11-19T01:35:24Z",
+      "date_last_checked": "2026-11-20T01:01:35Z",
+      "date_last_seen": "2026-11-21T07:46:21Z",
+      "date_expired": "2026-11-20T01:01:35Z",
+      "summary": "Polish radio launch-day promotion.",
+      "thumbnail": null,
+      "tags": [
+        "GTA 6",
+        "Giveaway",
+        "Website"
+      ],
+      "status": "Expired",
+      "warnings": [
+        "The sign-up asks for your name, email and phone number",
+        "Times and prize count are approximate"
+      ],
+      "trusted_source": false,
+      "moderation_notes": "Curated entry from config/curated.json [auto] end date passed",
+      "report_count": 0,
+      "duplicate_hash": "5b742bd9d53b6bd2",
+      "fetch_failures": 0,
+      "curated": true
+    },
+    {
+      "id": "gv-d4f008f6bf",
+      "title": "KISS – win a PS5 and GTA 6 on launch day (Make Me A Winner)",
+      "platform": "Website",
+      "url": "https://www.hellorayo.co.uk/kiss/competitions/win/make-me-a-winner-win-a-ps5-and-gta6",
+      "creator": "KISS (Rayo / Bauer Media)",
+      "creator_url": "https://www.hellorayo.co.uk/kiss",
+      "prize": "1 PlayStation 5 and a copy of GTA 6",
+      "entry_method": [
+        "Listen to KISS on Thursday 19 Nov",
+        "Play Make Me A Winner when told on air (4 chances during the day)"
+      ],
+      "entry_types": [
+        "watch-stream"
+      ],
+      "start_date": "2026-11-19T06:00:00Z",
+      "end_date": "2026-11-19T23:59:00Z",
+      "region_text": "UK radio promotion. Check the Make Me A Winner rules",
+      "regions": [
+        "uk"
+      ],
+      "verification": "Expired",
+      "confidence": 95,
+      "source": "curated",
+      "search_query": null,
+      "date_first_found": "2026-11-19T09:34:09Z",
+      "date_last_checked": "2026-11-20T01:01:35Z",
+      "date_last_seen": "2026-11-21T07:46:21Z",
+      "date_expired": "2026-11-20T01:01:35Z",
+      "summary": "Radio station launch-day prize. Details are announced on air, so the times are approximate.",
+      "thumbnail": null,
+      "tags": [
+        "GTA 6",
+        "Giveaway",
+        "Website"
+      ],
+      "status": "Expired",
+      "warnings": [
+        "Start and end times are approximate",
+        "Check the Make Me A Winner rules for how to enter"
+      ],
+      "trusted_source": false,
+      "moderation_notes": "Curated entry from config/curated.json [auto] end date passed",
+      "report_count": 0,
+      "duplicate_hash": "4552d2e5f84255aa",
+      "fetch_failures": 0,
+      "curated": true
+    },
+    {
+      "id": "gv-47562d489d",
+      "title": "KISSTORY – win a PS5 and GTA 6 on launch day (Make Me A Winner)",
+      "platform": "Website",
+      "url": "https://www.hellorayo.co.uk/kisstory/competitions/win/make-me-a-winner-win-a-ps5-and-gta6",
+      "creator": "KISSTORY (Rayo / Bauer Media)",
+      "creator_url": "https://www.hellorayo.co.uk/kisstory",
+      "prize": "1 PlayStation 5 and a copy of GTA 6",
+      "entry_method": [
+        "Listen to KISSTORY on Thursday 19 Nov",
+        "Play Make Me A Winner when told on air (4 chances during the day)"
+      ],
+      "entry_types": [
+        "watch-stream"
+      ],
+      "start_date": "2026-11-19T06:00:00Z",
+      "end_date": "2026-11-19T23:59:00Z",
+      "region_text": "UK radio promotion. Check the Make Me A Winner rules",
+      "regions": [
+        "uk"
+      ],
+      "verification": "Expired",
+      "confidence": 95,
+      "source": "curated",
+      "search_query": null,
+      "date_first_found": "2026-11-19T09:34:09Z",
+      "date_last_checked": "2026-11-20T01:01:35Z",
+      "date_last_seen": "2026-11-21T07:46:21Z",
+      "date_expired": "2026-11-20T01:01:35Z",
+      "summary": "Radio station launch-day prize. Details are announced on air, so the times are approximate.",
+      "thumbnail": null,
+      "tags": [
+        "GTA 6",
+        "Giveaway",
+        "Website"
+      ],
+      "status": "Expired",
+      "warnings": [
+        "Start and end times are approximate",
+        "Check the Make Me A Winner rules for how to enter"
+      ],
+      "trusted_source": false,
+      "moderation_notes": "Curated entry from config/curated.json [auto] end date passed",
+      "report_count": 0,
+      "duplicate_hash": "63be5011cd911d08",
       "fetch_failures": 0,
       "curated": true
     }
