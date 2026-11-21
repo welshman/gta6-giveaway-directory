@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-20T18:07:13Z",
+  "updated_at": "2026-11-21T00:22:06Z",
   "giveaways": [
     {
       "id": "gv-ae72ae3589",
@@ -31,7 +31,7 @@
       "search_query": null,
       "date_first_found": "2026-11-18T04:13:15Z",
       "date_last_checked": "2026-11-19T01:37:28Z",
-      "date_last_seen": "2026-11-20T18:05:05Z",
+      "date_last_seen": "2026-11-21T00:20:00Z",
       "date_expired": "2026-11-19T01:37:28Z",
       "summary": "Posted 14 Nov, ends 18 Nov. The post says it is not sponsored by Rockstar or Take-Two.",
       "thumbnail": null,
@@ -83,7 +83,7 @@
       "search_query": null,
       "date_first_found": "2026-11-18T04:13:15Z",
       "date_last_checked": "2026-11-19T01:37:28Z",
-      "date_last_seen": "2026-11-20T18:05:05Z",
+      "date_last_seen": "2026-11-21T00:20:00Z",
       "date_expired": "2026-11-19T01:37:28Z",
       "summary": "Posted 14 Nov, winners picked 18 Nov. The post mentions a PC copy, but GTA 6 is only on PS5 and Xbox.",
       "thumbnail": null,
@@ -136,7 +136,7 @@
       "search_query": null,
       "date_first_found": "2026-11-18T04:13:15Z",
       "date_last_checked": "2026-11-19T01:37:28Z",
-      "date_last_seen": "2026-11-20T18:05:05Z",
+      "date_last_seen": "2026-11-21T00:20:00Z",
       "date_expired": "2026-11-19T01:37:28Z",
       "summary": "Posted 15 Nov, winner announced 18 Nov.",
       "thumbnail": null,
@@ -187,7 +187,7 @@
       "search_query": null,
       "date_first_found": "2026-11-18T00:10:27Z",
       "date_last_checked": "2026-11-19T09:36:11Z",
-      "date_last_seen": "2026-11-20T18:05:05Z",
+      "date_last_seen": "2026-11-21T00:20:00Z",
       "date_expired": "2026-11-19T09:36:11Z",
       "summary": "Run by Medal on its own site. Ends 18 Nov at 11:59 pm ET. No purchase or payment necessary.",
       "thumbnail": null,
@@ -205,6 +205,53 @@
       "moderation_notes": "Curated entry from config/curated.json [auto] end date passed",
       "report_count": 0,
       "duplicate_hash": "61e68f71763fb2ff",
+      "fetch_failures": 0,
+      "curated": true
+    },
+    {
+      "id": "gv-ead732efe3",
+      "title": "GTA BOOM – GTA 6 Ultimate Edition launch day draw",
+      "platform": "Website",
+      "url": "https://www.gtaboom.com/gta6-giveaway",
+      "creator": "GTA BOOM",
+      "creator_url": "https://www.gtaboom.com",
+      "prize": "1 full copy of GTA 6 Ultimate Edition (PS5 or Xbox Series X|S)",
+      "entry_method": [
+        "Subscribe to the newsletter",
+        "Post an approved comment, Q&A answer or server review"
+      ],
+      "entry_types": [
+        "form",
+        "comment"
+      ],
+      "start_date": null,
+      "end_date": "2026-11-19T11:59:00Z",
+      "region_text": "Account regions GTA BOOM can lawfully supply. See their terms",
+      "regions": [],
+      "verification": "Expired",
+      "confidence": 95,
+      "source": "curated",
+      "search_query": null,
+      "date_first_found": "2026-11-17T23:14:25Z",
+      "date_last_checked": "2026-11-19T18:46:48Z",
+      "date_last_seen": "2026-11-21T00:20:00Z",
+      "date_expired": "2026-11-19T18:46:48Z",
+      "summary": "Fan site draw. Free to enter, one entry per person, independent of Rockstar.",
+      "thumbnail": null,
+      "tags": [
+        "GTA 6",
+        "Giveaway",
+        "Website",
+        "No purchase necessary"
+      ],
+      "status": "Expired",
+      "warnings": [
+        "Needs your email address (newsletter sign-up)"
+      ],
+      "trusted_source": false,
+      "moderation_notes": "Curated entry from config/curated.json [auto] end date passed",
+      "report_count": 0,
+      "duplicate_hash": "9b3952a10f5bf54e",
       "fetch_failures": 0,
       "curated": true
     }
